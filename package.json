@@ -1,5 +1,5 @@
 {
-	"name": "Demin",
+	"name": "alo",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.html",
@@ -14,7 +14,7 @@
 		"gulp-file-include": "latest",
 		"gulp-fonter": "latest",
 		"gulp-group-css-media-queries": "latest",
-		"gulp-imagemin": "latest",
+		
 		"gulp-newer": "latest",
 		"gulp-plumber": "latest",
 		"gulp-rename": "latest",
@@ -29,5 +29,8 @@
 		"sass": "^1.37.0",
 		"transform-runtime": "0.0.0",
 		"webp-converter": "2.2.3"
+	},
+	"dependencies": {
+		"express": "^4.16.1"
 	}
 }

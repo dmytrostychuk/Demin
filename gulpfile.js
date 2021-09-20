@@ -1,6 +1,6 @@
 
 let project_folder = require("path").basename(__dirname);
-let source_folder = "#src";
+let source_folder = "src";
 
 let fs = require('fs');
 
@@ -39,9 +39,6 @@ let { src, dest } = require('gulp'),
 	clean_css = require("gulp-clean-css"),
 	rename = require("gulp-rename"),
 	uglify = require("gulp-uglify-es").default,
-	imagemin = require("gulp-imagemin"),
-	webp = require('imagemin-webp'),
-	
 	svgSprite = require('gulp-svg-sprite'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
@@ -105,24 +102,7 @@ function js() {
 		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }
-function images() {
-	return src(path.src.img)
-		.pipe(newer(path.build.img))
-		
-		
-		.pipe(dest(path.build.img))
-		.pipe(src(path.src.img))
-		.pipe(newer(path.build.img))
-		.pipe(
-			imagemin({
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
-				interlaced: true,
-				optimizationLevel: 3 // 0 to 7
-			})
-		)
-		.pipe(dest(path.build.img))
-}
+
 function fonts() {
 	src(path.src.fonts)
 		.pipe(ttf2woff())
@@ -176,13 +156,12 @@ function watchFiles(params) {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
-	gulp.watch([path.watch.img], images);
 }
 function clean(params) {
 	return del(path.clean);
 }
 let fontsBuild = gulp.series(fonts_otf, fonts, fontstyle);
-let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, html, css, js, images));
+let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, html, css, js));
 let watch = gulp.series(buildDev, gulp.parallel(watchFiles, browserSync));
 
 exports.fonts = fontsBuild;
