@@ -4,14 +4,271 @@
 		display: none;
 	}
 
-	.header {
-		&__name {
-			padding: 19px 0;
-		}
-		
+	.container {
+		margin: 0 7.1%;
 	}
 
+	.header {
 
+		// header__wrapper
+		&__wrapper {
+			padding-bottom: 0;
+		}
 
+		//header__inner
+		&__inner {
+			height: 617px;
+			width: 1366px;
+			margin: 0 auto;
+		}
 
+		//header__photo
+		&__photo {
+			position: relative;
+			top: -198px;
+			left: -121px;
+			width: 530px;
+			height: 617px;
+
+			//img
+			.img {
+				width: 530px;
+
+				img {
+					position: absolute;
+					top: 38px;
+					left: 50px;
+					width: 430px;
+					height: 517px;
+				}
+			}
+
+			//diagonal
+			&::before,
+			&::after {
+				width: 232px;
+				height: 176px;
+			}
+
+			&::before {
+				background-image: url("../img/diagonal-1\ desk.svg");
+			}
+
+			&::after {
+				background-image: url("../img/diagonal-2\ desk.svg");
+			}
+		}
+	}
+
+	//nav
+	.nav {
+		&__list {
+			flex-direction: column;
+			margin-top: 30px;
+			margin-left: 1px;
+			align-items: flex-start;
+
+			li {
+				margin-bottom: 30px;
+			}
+
+			a {
+				padding: 10px 0;
+			}
+		}
+
+		//sprite
+		.desktop {
+			display: flex;
+			flex-direction: column;
+			.nav__search {
+				left: 41px;
+				top: 71px;
+				padding: 13px;
+			}
+		
+			.nav__basket {
+				right: -4px;
+				top: 17px;
+				padding: 13px;
+			}
+		}
+	}
+
+	//table__wrapper
+	.table__wrapper {
+		height: 420px;
+	}
+
+	.new-collection {
+		position: relative;
+		top: -36px;
+		padding: 0;
+		text-align: start;
+
+		&__denim {
+			margin-top: 9px;
+			margin-bottom: 64px;
+			margin-left: -4px;
+			font-size: 128px;
+		}
+	}
+
+	.button {
+		margin-left: 0px;
+		padding: 23px 24px;
+	}
+
+	//header__copy
+	.header__copy {
+		top: -103px;
+
+		.arrow-down {
+			top: 0;
+			left: -14px;
+		}
+
+		// social
+		.social {
+
+			&__list {
+				position: relative;
+				top: -24px;
+				display: flex;
+				flex-direction: column-reverse;
+				font-family: "WorkSans-Medium";
+				font-size: 14px;
+			}
+
+			&__item {
+				width: 69px;
+				padding: 0;
+				margin-left: -4px;
+				padding-bottom: 30px;
+
+			}
+
+			a {
+				padding: 15px 0;
+			}
+		}
+	}
+
+	//main 
+	.main {
+		min-height: 1814px;
+	}
+
+	//main__sellers
+	.main__sellers {
+		font-size: 32px;
+		
+		p {
+			margin-top: 66px;
+		}
+		
+		.table {
+			padding: 4px 7px 0 5px;
+			margin-bottom: 5px;
+			font-family: "WorkSans-Medium";
+			font-size: 18px;
+			
+			border-bottom: 2px solid #151C22;
+		}
+	}
+
+	//bestsellers
+	.bestsellers {
+		margin-top: 65px;
+		font-size: 18px;
+
+		&__cart {
+			margin-bottom: 47px;
+
+			p {
+				padding-top: 23px;
+
+				&:nth-last-child(1) {
+					padding-top: 10px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	// collection
+	.collection {
+		width: 1170px;
+		margin-top: 23px;
+
+		&__wrap {
+			width: 470px;
+			min-height: 370px;
+			background-image: url("../img/diagonal-fall-desk.svg");
+		}
+
+		// collection__fashion
+		&__fashion {
+			top: 30px;
+			width: 400px;
+			min-height: 308px;
+			padding-top: 70px;
+		}
+
+		p {
+			margin-left: 70px;
+			margin-bottom: 10px;
+
+			&:nth-last-child(2) {
+				padding-bottom: 57px;
+			}
+		}
+
+		.button {
+			margin-left: 70px;
+			padding: 23px 61px;
+		}
+	}
+
+	//category
+	.category {
+		
+		.bestsellers__cart4 {
+			margin-top: 0;
+		}
+		p {
+			margin-top: 12px;
+			&:nth-last-child(1) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	// footer
+	.footer {
+		&__inner {
+			min-height: 222px;
+		}
+
+		&__copy {
+			padding-top: 47px;
+		}
+
+		&__list {
+			margin-top: 29px;
+		}
+	}
+
+	// social__list
+	.social__list {
+		width: 168px;
+		margin: 0 auto;
+		margin-top: 33px;
+	}
+
+	.socials {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: -25px;
+	}
 }

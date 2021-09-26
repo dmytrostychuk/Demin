@@ -12,14 +12,27 @@
 @import "table";
 @import "desktop";
 
+body {
+	font-size: 18px;
+	font-family: "WorkSans-Medium";
+}
+
 a {
 	color: #151C22;
 }
 
+.table {
+	display: none;
+}
 
 
 .container {
-	margin: 0 4.5%;
+	margin: 0 4.8%;
+}
+
+.header__inner {
+	width: 320px;
+	margin: 0 auto;
 }
 
 // header
@@ -42,6 +55,11 @@ a {
 	&__wrapper {
 		padding-bottom: 74px;
 		background-color: #F1F2F4;
+	}
+
+	//header__inner 
+	&__inner {
+		height: 580px;
 	}
 
 	//header__photo
@@ -91,7 +109,6 @@ a {
 	font-family: "WorkSans-Medium";
 	font-size: 16px;
 	
-
 	&__list {
 		position: relative;
 		display: flex;
@@ -100,6 +117,7 @@ a {
 
 		li {
 			padding-right: 25px;
+
 			&:nth-last-child(1) {
 				padding: 0;
 			}
@@ -111,6 +129,7 @@ a {
 		}
 	}
 
+	//desktop
 	.desktop {
 		position: relative;
 		width: 65px;
@@ -125,7 +144,7 @@ a {
 			padding: 13px;
 			background-image: url("../img/search.svg");
 			background-repeat: no-repeat;
-			}
+		}
 	
 		.nav__basket {
 			content: "";
@@ -141,9 +160,13 @@ a {
 	}
 }
 
+.socials {
+	display: flex;
+	font-family:"WorkSans-Medium";
+	font-size: 16px;	
+}
 
-
-
+//new-collection
 .new-collection {
 	margin: 0 auto;
 	margin-top: 27px;
@@ -173,6 +196,144 @@ a {
 	padding: 23px 17px;
 	background-color: #151C22;
 	font-family: "WorkSans-Bold";
+	color: #ffffff;
 }
 
+//main
+.main {
+	min-height: 1677px;
+	//main__sellers
+	&__sellers {
+		margin-top: 57px;
+		font-family: "WorkSans-Bold";
+		font-size: 26px;
 
+		.mobile {
+			width: 70px;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: -49px;
+			font-family: "WorkSans-Medium";
+			font-size: 16px;
+			border-bottom: 2px solid #151C22;
+		}
+	}
+}
+
+//bestsellers
+.bestsellers {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 35px;
+	font-size: 16px;
+
+	&__cart {
+		margin-bottom: 28px;
+
+		p {
+			padding-top: 13px;
+			
+
+			&:nth-last-child(1) {
+				padding-top: 5px;
+				font-family:"WorkSans-Bold";
+			font-size: 14px;
+			}
+		}
+	}
+}
+
+// collection
+.collection {
+	margin-top: 60px;
+
+	&__wrap {
+		min-height: 226px;
+		padding-top: 10px;
+		background-image: url("../img/diagonal-fall-mob.svg");
+		background-repeat: no-repeat;
+	}
+
+	// collection__fashion
+	&__fashion {
+		position: relative;
+		bottom: -9px;
+		left: 15px;
+		width: 290px;
+		min-height: 207px;
+		padding-top: 35px;
+		text-align: center;
+		background-color: #F1F2F4;
+	}
+
+	p {
+		margin-bottom: 5px;
+		color: #727A82;
+
+		&:nth-last-child(2) {
+			padding-bottom: 40px;
+			font-family:"WorkSans-Bold";
+			font-size: 26px;
+			color: #151C22;
+		}
+	}
+
+	.button {
+		font-size: 16px;
+		padding: 19px 34px;
+	}
+}
+
+//category
+.category {
+
+	.bestsellers__cart4 {
+		margin-top: -35px;
+	}
+	p {
+		margin-top: 8px;
+		&:nth-last-child(1) {
+			font-family:"WorkSans-Medium";
+			font-size: 16px;
+		}
+	}
+}
+
+// footer
+.footer {
+	&__inner {
+		min-height: 230px;
+		margin: 0 auto;
+		background-color: #151C22;
+		color: #FFFFFF;
+	}
+}
+
+// mobile__copy 
+.mobile__copy {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 53px;
+
+	p {
+		min-width: 130px;
+		padding-bottom: 25px;
+
+		&:nth-child(1) {
+			margin-top: -5px;
+			font-family: "WorkSans-ExtraBold";
+			font-size: 24px;
+		}
+	}
+}
+
+// social__list
+.social__list {
+	display: flex;
+	justify-content: space-between;
+	width: 179px;
+	margin-top: 13px;
+	margin-left: 7px;
+}

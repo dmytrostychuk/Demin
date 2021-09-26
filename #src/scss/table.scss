@@ -1,6 +1,15 @@
 @media (min-width: 768px) {
+	
 	.container {
 		margin: 0 6%;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	.table {
+		display: block;
 	}
 
 	.header {
@@ -8,10 +17,21 @@
 			padding: 22px 0;
 		}
 
+		//header__inner 
+		&__inner {
+			height: 483px;
+		}
+
 		// header__wrapper
 		&__wrapper {
+			
 			padding-bottom: 43px;
 			background-color: #F1F2F4;
+		}
+
+		&__inner {
+			width: 768px;
+			margin: 0 auto;
 		}
 
 		//header__photo
@@ -48,7 +68,7 @@
 		}
 	}
 
-	
+	//nav
 	.nav {
 		&__list {
 			padding: 15px 0;
@@ -61,6 +81,7 @@
 			}
 		}
 
+		//sprite
 		.desktop {
 		
 			.nav__search {
@@ -81,12 +102,14 @@
 		}
 	}
 
+	// table__wrapper
 	.table__wrapper {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row-reverse;
 	}
 
+	// new-collection
 	.new-collection {
 		padding-top: 58px;
 		padding-left: 31px;
@@ -96,22 +119,23 @@
 			margin-bottom: 75px;
 			margin-left: 16px;
 			font-size: 98px;
+			color: #151C22;
 		}
 	}
-
-
 
 	.button {
 		margin-left: 9px;
 		padding: 23px 24px;
 	}
 
+	// header__copy 
 	.header__copy {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		margin-top: 18px;
 
+		// arrow-down
 		.arrow-down {
 			content: "";
 			position: absolute;
@@ -125,7 +149,7 @@
 			background-position: center;
 		}
 
-
+		// social
 		.social {
 
 			&__list {
@@ -144,6 +168,140 @@
 		}
 	}
 
+	//main 
+	.main {
+		min-height: 2430px;
+	}
+
+	//main__sellers
+	.main__sellers {
+		display: flex;
+		justify-content: space-between;
+		font-size: 28px;
+		
+		p {
+			margin-top: 40px;
+		}
+		
+		.table {
+			padding: 0 5px;
+			margin-bottom: 5px;
+			font-family: "WorkSans-Medium";
+			font-size: 18px;
+			border-bottom: 2px solid #151C22;
+		}
+	}
 	
+	//bestsellers
+	.bestsellers {
+		margin-top: 55px;
+		font-size: 18px;
+
+		&__cart {
+			margin-bottom: 47px;
+
+			p {
+				padding-top: 23px;
+
+				&:nth-last-child(1) {
+					padding-top: 10px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
 	
+
+	// collection
+	.collection {
+		display: flex;
+		flex-direction: row-reverse;
+		width: 678px;
+		margin: 0 auto;
+		margin-top: -6px;
+
+		&__wrap {
+			width: 324px;
+			min-height: 287px;
+			padding-top: 0;
+			background-image: url("../img/diagonal-fall-tab.svg");
+		}
+
+		// collection__fashion
+		&__fashion {
+			top: 20px;
+			left: 0;
+			width: 304px;
+			min-height: 247px;
+			padding-top: 47px;
+			text-align: start;
+		}
+
+		p {
+			margin-left: 49px;
+			margin-bottom: 7px;
+
+			&:nth-last-child(2) {
+				padding-bottom: 46px;
+				font-size: 32px;
+			}
+		}
+
+		.button {
+			margin-left: 51px;
+			padding: 19px 35px;
+		}
+	}
+
+	//category
+	.category {
+	
+		.bestsellers__cart4 {
+			margin-top: -58px;
+		}
+		p {
+			margin-top: 12px;
+			&:nth-last-child(1) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	// footer
+	.footer {
+		&__inner {
+			min-height: 230px;
+		}
+
+		&__copy {
+			padding-top: 48px;
+			font-family: "WorkSans-ExtraBold";
+			font-size: 24px;
+			text-align: center;
+		}
+
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			width: 478px;
+			margin: 0 auto;
+			margin-top: 34px;
+			font-family: "WorkSans-Medium";
+			font-size: 18px;
+
+			a {
+				color: #FFFFFF;
+			}
+		}
+	}
+
+	// social__list
+	.social__list {
+		width: 183px;
+		margin: 0 auto;
+		margin-top: 36px;
+		align-items: center;
+	}
+
 }
