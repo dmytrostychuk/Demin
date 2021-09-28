@@ -147,6 +147,17 @@
 			background-image: url("../img/arrow-down.svg");
 			background-repeat: no-repeat;
 			background-position: center;
+
+			&:hover,
+			&:focus {
+				color: #727A82;
+				transition: 0.3s;
+			}	
+
+			&:active {
+				color: #727A82;
+				opacity: 0.3;
+			}
 		}
 
 		// social
@@ -292,6 +303,17 @@
 
 			a {
 				color: #FFFFFF;
+
+				&:hover,
+				&:focus {
+					color: #727A82;
+					transition: 0.3s;
+				}
+
+				&:active {
+				color: #727A82;
+				opacity: 0.3;
+				}
 			}
 		}
 	}
