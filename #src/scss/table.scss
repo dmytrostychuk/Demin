@@ -20,6 +20,8 @@
 		//header__inner 
 		&__inner {
 			height: 483px;
+			width: 768px;
+			margin: 0 auto;
 		}
 
 		// header__wrapper
@@ -27,11 +29,6 @@
 			
 			padding-bottom: 43px;
 			background-color: #F1F2F4;
-		}
-
-		&__inner {
-			width: 768px;
-			margin: 0 auto;
 		}
 
 		//header__photo
@@ -326,4 +323,132 @@
 		align-items: center;
 	}
 
+	//----------------catalog----------------------
+
+	//catalog__inner
+	.catalog__inner {
+		width: 768px;
+		margin: 0 auto;
+	}
+
+	//menu
+	.menu {
+
+		//menu__list
+		&__list {
+			position: relative;
+			flex-direction: row;
+			left: 0;
+			width: 10%;
+			margin-top: -4px;
+			font-size: 16px;
+			background-color: #ffffff;
+			
+
+			li {
+				text-align: start;
+				width: auto;
+				margin-right: 25px;
+				padding-left: 0;
+			}
+
+			a {
+				padding: 0px;
+			}
+		}
+
+		//menu__items 
+		&__items {
+
+			//menu__search
+			.menu__search::before {
+				left: 150px;
+			}
+		}
+	}
+
+	//top-collection
+	.top-collection {
+		margin-top: 10px;
+		background-color: #F1F2F4;
+
+		//main-nav
+		.main-nav {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+
+			&__photo {
+				position: relative;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+				}
+
+				&::before {
+					bottom: 0;
+					left: -30px;
+					width: 178px;
+					height: 135px;
+					background-image: url("../img/diagonal\ -catalog-1.svg");
+					background-repeat: no-repeat;
+				}
+
+				&::after {
+					z-index: 0;
+					top: 0;
+					right: 0px;
+					width: 232px;
+					height: 176px;
+					background-image: url("../img/diagonal\ -catalog-2.svg");
+					background-repeat: no-repeat;
+				}
+				
+			}
+
+			img {
+				position: relative;
+				z-index: 1;
+				margin-right: 30px;
+			}
+		}
+	}
+
+	//main__nav
+	.main-nav {
+		width: 677px;
+		margin: 0 auto;
+
+		//main__nav
+		&__list {
+			display: flex;
+			margin-top: 76px;
+			margin-bottom: 24px;
+		}
+
+		li {
+			margin-right: 11px;
+		}
+
+		p {
+			line-height: 125%;
+			font-family: "WorkSans-ExtraBold";
+			font-size: 28px;
+		}
+	}
+
+	//filter
+	.filter {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 26px;
+
+		//filter__block
+		&__block {
+			width: 206px;
+			padding: 13px;
+		}
+	}
 }

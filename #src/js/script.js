@@ -12,3 +12,18 @@ testWebP(function (support) {
 		document.querySelector('html').classList.add('_no-webp');
 	}
 });
+
+// $('burger-bth').on('click', function(e){
+// 	e.preventDefault;
+// 	$(this).toggleClass('burger-bth__active')
+// });
+
+// Меню бургер
+const burgerBth = document.querySelector('.burger-bth');
+const menuNav = document.querySelector('.menu__nav');
+if (burgerBth) {
+	burgerBth.addEventListener("click", function (e) {
+		menuNav.classList.toggle('nav-active');
+		burgerBth.classList.toggle('bth-active');
+	});
+}
