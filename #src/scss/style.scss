@@ -463,7 +463,7 @@ a {
 		left: -1000%;
 		display: flex;
 		flex-direction: column;
-		width: 300%;
+		width: 320%;
 		margin-top: 40px;
 		align-items: center;
 		background-color: #E5E5E5;
@@ -629,5 +629,17 @@ a {
 			right: 0;
 			transform: rotate(-45deg);
 		}
+	}
+}
+
+//goods  
+.goods {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1em;
+	padding-top: 40px;
+
+	&__card {
+		
 	}
 }
