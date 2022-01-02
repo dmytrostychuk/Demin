@@ -633,13 +633,8 @@ a {
 }
 
 //goods  
-.goods {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 1em;
-	padding-top: 40px;
-
-	&__card {
-		
-	}
+.woman {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
