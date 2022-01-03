@@ -598,36 +598,39 @@ a {
 	&__block {
 		display: flex;
 		justify-content: space-between;
-		padding: 11px;
-		padding-left: 15px;
-		border: 2px solid #151C22;
+		
 	}
-	
 
-	//filter__bth
 	&__bth {
 		position: relative;
-		padding: 10px;
+		width: 100%;
+		padding: 11px;
+		padding-right: 70%;
+		background-color: #ffffff;
+		border: 2px solid #151C22;
 
-		&::before,
+		span {
+				&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			top: 7px;
+			top: 17px;
+			right: 15px;
 			height: 2px;
 			background-color: #151C22;
 		}
 
 		&::before {
 			width: 13px;
-			left: 0;
+			
 			transform: rotate(45deg);
 		}
 
 		&::after {
 			width: 12px;
-			right: 0;
+			right: 8px;
 			transform: rotate(-45deg);
+		}
 		}
 	}
 }
@@ -635,6 +638,34 @@ a {
 //goods  
 .woman {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 40px;
 }
+  .woman__card {
+	display: none;
+  }
+
+  .card-load {
+	  height: 66px;
+	  margin: 0 auto;
+	  margin-top: 30px;
+	  margin-bottom: 60px;
+	  padding: 25px 50px;
+	  color: #ffffff;
+	  background-color: #151C22;
+	  transition: .3s;
+
+	  &:hover {
+		background-color: #727A82;
+	  }
+	  &:active {
+		  background-color: #ffffff;
+		  color: #000000;
+	  }
+  }
+
+  .no-сontent{
+	background-color: #727A82;
+	pointer-events: none;
+  }

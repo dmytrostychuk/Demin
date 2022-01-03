@@ -736,36 +736,37 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 11px;
-  padding-left: 15px;
-  border: 2px solid #151C22;
 }
 
 .filter__bth {
   position: relative;
-  padding: 10px;
+  width: 100%;
+  padding: 11px;
+  padding-right: 70%;
+  background-color: #ffffff;
+  border: 2px solid #151C22;
 }
 
-.filter__bth::before,
-.filter__bth::after {
+.filter__bth span::before,
+.filter__bth span::after {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 17px;
+  right: 15px;
   height: 2px;
   background-color: #151C22;
 }
 
-.filter__bth::before {
+.filter__bth span::before {
   width: 13px;
-  left: 0;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.filter__bth::after {
+.filter__bth span::after {
   width: 12px;
-  right: 0;
+  right: 8px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -775,11 +776,43 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.woman__card {
+  display: none;
+}
+
+.card-load {
+  height: 66px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding: 25px 50px;
+  color: #ffffff;
+  background-color: #151C22;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card-load:hover {
+  background-color: #727A82;
+}
+
+.card-load:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.no-сontent {
+  background-color: #727A82;
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {

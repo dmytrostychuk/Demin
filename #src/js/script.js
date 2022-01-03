@@ -27,3 +27,16 @@ if (burgerBth) {
 		burgerBth.classList.toggle('bth-active');
 	});
 }
+
+
+$(document).ready(function(){
+	$(".woman__card").slice(0, 5).show();
+	$(".card-load").on("click", function(e){
+	  e.preventDefault();
+	  $(".woman__card:hidden").slice(0, 4).slideDown();
+	  if($(".woman__card:hidden").length == 0) {
+		$(".card-load").text("No Content").addClass("no-сontent");
+	  }
+	});
+	
+  })
