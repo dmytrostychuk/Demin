@@ -637,9 +637,7 @@ a {
 
 //goods  
 .woman {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
 	margin-top: 40px;
 }
   .woman__card {
