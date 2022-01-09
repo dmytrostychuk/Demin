@@ -451,4 +451,22 @@
 			padding: 13px;
 		}
 	}
+
+
+
+
+
+
+	// ---------catalog---------
+	.woman {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-flow: row dense; 
+		margin-top: 40px;
+	}
+	
+	  .woman__card5 {
+		grid-column: span 2;
+		grid-row: span 2;
+	  }
 }

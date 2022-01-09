@@ -593,51 +593,262 @@ a {
 //filter
 .filter {
 	margin-top: 28px;
-
-	//filter__block
-	&__block {
-		display: flex;
-		justify-content: space-between;
-		
-	}
-
-	&__bth {
-		position: relative;
-		width: 100%;
-		padding: 11px;
-		padding-right: 70%;
-		background-color: #ffffff;
-		border: 2px solid #151C22;
-
-		span {
-				&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 17px;
-			right: 15px;
-			height: 2px;
-			background-color: #151C22;
-		}
-
-		&::before {
-			width: 13px;
-			
-			transform: rotate(45deg);
-		}
-
-		&::after {
-			width: 12px;
-			right: 8px;
-			transform: rotate(-45deg);
-		}
-		}
-	}
+		  
+	
 }
+
+//Form-----------
+
+.form {
+	position: relative;
+	display: block;
+	width: 206px;
+	font-size: 18px;
+  
+	&__inner {
+	  display: block;
+	  height: 0px;
+	}
+  
+	input {
+	  display: none;
+	  visibility: hidden;
+	}
+  
+	&__filter:checked ~ &__label {
+	  opacity: 1;
+	  border-top: none;
+	  font-size: 16px;
+	  transform: translateX(0%);
+	}
+  
+	&__filter:checked ~ &__close {
+	  border-bottom: 2px solid #000000;
+	}
+  
+  
+	.checkbox2:checked ~ &__price-content {
+	  min-height: 70px;
+	  font-size: 14px;
+	  opacity: 1;
+	  transform: translateX(0px);
+	
+	}
+  
+	.checkbox3:checked ~ &__color-content,
+	.checkbox4:checked ~ &__collection-content {
+	   display: flex;
+	   flex-wrap: wrap;
+	   justify-content: space-between;
+	   min-height: 90px;
+	   font-size: 14px;
+	   opacity: 1;
+	   transform: translateX(0%);
+	 }
+   
+	&__filter:checked ~ .first,
+	.checkbox2:checked ~ .first,
+	.checkbox3:checked ~ .first,
+	.checkbox4:checked ~ .first {
+	  transform: rotate(-45deg);
+	}
+  
+	&__filter:checked ~ .second,
+	.checkbox2:checked ~ .second,
+	.checkbox3:checked ~ .second,
+	.checkbox4:checked ~ .second {
+	  transform: rotate(45deg);
+	}
+	
+	&__tittle {
+	  padding: 15px;
+	  padding-left: 15px;
+	  border: 2px solid #151C22;
+	}
+  
+	&__label {
+	  display: flex;
+	  flex-direction: column;
+	  position: relative;
+	  width: 100%;
+	  font-size: 0;
+		overflow: hidden;
+	  transition: 0.5s all;
+	  opacity: 0;
+	  transform: translateX(200px);
+	  border: 2px solid #000000;
+	  background-color: #ffffff;
+	}
+  
+  
+	.content-text {
+	  padding-top: 15px;
+	  padding-left: 15px;
+	}
+  
+	&__content {
+	  display: block;
+	  position: relative;
+	  width: 100%;
+	  font-size: 0;
+	  padding: 10px;
+		overflow: hidden;
+	  transition: 0.5s all;
+	}
+  
+  // arrow --------------------
+	&__line {
+	  position: absolute;
+	  width: 10px;
+	  height: 2px;
+	  background-color: #000000;
+	  transition: 0.5s all;
+	}
+  
+	.first {
+	  top: 20px;
+	  right: 19px;
+	  transform: rotate(45deg);
+	}
+  
+	.second {
+	  top: 20px;
+	  right: 12px;
+	  transform: rotate(-45deg);
+	}
+	// ----------------arrow //
+  
+	&__apply {
+	  background-color: #151C22;
+	}
+  
+	.apply {
+	  color: #FFFFFF;
+	  padding: 15px;
+	}
+  
+	.close {
+	  padding-right: 15px;
+	  padding-bottom: 15px;
+	  text-align: center;
+	}
+  
+	.empty-block {
+	  padding-bottom: 40px;
+	}
+  
+	 //price ----------------
+	 .form__price-content {
+	  transition: 0.5s all;
+	  opacity: 0;
+	  transform: translateX(500px);
+	  min-height: 10px;
+	  padding: 0;
+	  margin: 0;
+	}
+  
+	.slider-range {
+	  position: relative;
+	  width: 80%;
+	  background-color: black;
+	  height: 10px;
+	  margin-top: 20px;
+	  margin-left: 20px;
+  
+	  span {
+		position: absolute;
+		border-radius: 50%;
+		background-color: black;
+	  }
+	}
+	// ---------------- price
+	
+	//Color ---------------
+	.form__color-content {
+	  margin-bottom: 5px;
+	  padding-right: 60px;
+	  
+	  label {
+		cursor: pointer;
+		position: relative;
+		width: 33%;
+	  }
+  
+	  label:before {
+		content: "";
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		right: 50%;
+		top: 50%;
+		border-radius: 50%;
+	  }
+  
+	  .color1::before  {
+		background-color: #B0C3C7;
+	  }
+  
+	  .color2::before {
+		background-color: #3B6392;
+	  }
+  
+	  .color3::before {
+		background-color: #BFC3C8;
+	  }
+  
+	  .color4::before {
+		background-color: #2D2E2E;
+	  }
+  
+	  .color5::before {
+		background-color: #ECECEC;
+	  }
+  
+	  .color6::before {
+		background-color: #4193DA;
+	  }
+  
+	  input[type=radio]:checked + label:before {
+		width: 16px;
+		height: 16px;
+		box-shadow: 0px 0px 3px 5px rgba(216, 170, 32, 1);
+	  }
+	}
+  
+	.form__color-content,
+	.form__collection-content {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  transition: 0.5s all;
+	  opacity: 0;
+	  transform: translateX(500px);
+	  min-height: 10px;
+	}
+  
+	//Collection ---------------
+	.form__collection-content {
+	  .cont {
+		width: 50%;
+		margin-left: -15px;
+		margin-top: 10px;
+	  }
+  
+	  a {
+		padding: 5px 20px;
+		padding-right: 40px;
+	  }
+	}
+	//---------------Collection
+  }
+
+  //--------------Form
 
 //goods  
 .woman {
-	display: grid;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-top: 40px;
 }
   .woman__card {
