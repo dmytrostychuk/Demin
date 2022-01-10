@@ -561,7 +561,6 @@ a {
 }
 
 .catalog__inner {
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -732,7 +731,7 @@ a {
 .form {
   position: relative;
   display: block;
-  width: 206px;
+  width: 100%;
   font-size: 18px;
 }
 
@@ -748,6 +747,7 @@ a {
 
 .form__filter:checked ~ .form__label {
   opacity: 1;
+  background-color: #ffffff;
   border-top: none;
   font-size: 16px;
   -webkit-transform: translateX(0%);
@@ -756,13 +756,17 @@ a {
 }
 
 .form__filter:checked ~ .form__close {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #151C22;
+}
+
+.form__filter:checked ~ .form__apply {
+  background-color: #151C22;
 }
 
 .checkbox2:checked ~ .form__price-content {
   min-height: 70px;
   font-size: 14px;
-  opacity: 1;
+  opacity: 0.9;
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
           transform: translateX(0px);
@@ -781,9 +785,9 @@ a {
   min-height: 90px;
   font-size: 14px;
   opacity: 1;
-  -webkit-transform: translateX(0%);
-      -ms-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .form__filter:checked ~ .first,
@@ -808,6 +812,7 @@ a {
   padding: 15px;
   padding-left: 15px;
   border: 2px solid #151C22;
+  background-color: #ffffff;
 }
 
 .form__label {
@@ -826,11 +831,10 @@ a {
   -o-transition: 0.5s all;
   transition: 0.5s all;
   opacity: 0;
-  -webkit-transform: translateX(200px);
-      -ms-transform: translateX(200px);
-          transform: translateX(200px);
-  border: 2px solid #000000;
-  background-color: #ffffff;
+  -webkit-transform: translateY(500%);
+      -ms-transform: translateY(500%);
+          transform: translateY(500%);
+  border: 2px solid #151C22;
 }
 
 .form .content-text {
@@ -881,6 +885,7 @@ a {
 }
 
 .form .apply {
+  background-color: #151C22;
   color: #FFFFFF;
   padding: 15px;
 }
@@ -900,9 +905,9 @@ a {
   -o-transition: 0.5s all;
   transition: 0.5s all;
   opacity: 0;
-  -webkit-transform: translateX(500px);
-      -ms-transform: translateX(500px);
-          transform: translateX(500px);
+  -webkit-transform: translateY(500%);
+      -ms-transform: translateY(500%);
+          transform: translateY(500%);
   min-height: 10px;
   padding: 0;
   margin: 0;
@@ -911,7 +916,7 @@ a {
 .form .slider-range {
   position: relative;
   width: 80%;
-  background-color: black;
+  background-color: #151C22;
   height: 10px;
   margin-top: 20px;
   margin-left: 20px;
@@ -920,7 +925,7 @@ a {
 .form .slider-range span {
   position: absolute;
   border-radius: 50%;
-  background-color: black;
+  background-color: #151C22;
 }
 
 .form .form__color-content {
@@ -939,8 +944,8 @@ a {
   width: 16px;
   height: 16px;
   position: absolute;
-  right: 50%;
-  top: 50%;
+  right: 30%;
+  top: 30%;
   border-radius: 50%;
 }
 
@@ -971,8 +976,19 @@ a {
 .form .form__color-content input[type=radio]:checked + label:before {
   width: 16px;
   height: 16px;
-  -webkit-box-shadow: 0px 0px 3px 5px #d8aa20;
-          box-shadow: 0px 0px 3px 5px #d8aa20;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+}
+
+.form .form__color-content label:hover:before {
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.7);
 }
 
 .form .form__color-content,
@@ -989,9 +1005,9 @@ a {
   -o-transition: 0.5s all;
   transition: 0.5s all;
   opacity: 0;
-  -webkit-transform: translateX(500px);
-      -ms-transform: translateX(500px);
-          transform: translateX(500px);
+  -webkit-transform: translateY(500%);
+      -ms-transform: translateY(500%);
+          transform: translateY(500%);
   min-height: 10px;
 }
 
@@ -1002,20 +1018,32 @@ a {
 }
 
 .form .form__collection-content a {
+  color: #727A82;
   padding: 5px 20px;
   padding-right: 40px;
 }
 
+.form .form__collection-content a:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #151C22;
+}
+
+.form .form__collection-content .cont__active {
+  color: #151C22;
+}
+
 .woman {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row dense;
+  margin-top: 80px;
+}
+
+.woman__card5 {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .woman__card {
@@ -1023,13 +1051,17 @@ a {
 }
 
 .card-load {
+  position: relative;
+  left: 50%;
   height: 66px;
-  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 60px;
   padding: 25px 50px;
   color: #ffffff;
   background-color: #151C22;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1486,24 +1518,31 @@ a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-top: 26px;
+    width: 100%;
+    padding-right: 3%;
   }
 
-  .filter__block {
+  .form {
     width: 206px;
-    padding: 13px;
   }
 
   .woman {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row dense;
-    margin-top: 40px;
   }
 
   .woman__card5 {
     grid-column: span 2;
     grid-row: span 2;
+  }
+
+  .card-load {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
@@ -1806,13 +1845,15 @@ a {
     font-size: 32px;
   }
 
-  .filter {
-    margin-top: 40px;
+  .woman {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row dense;
   }
 
-  .filter__block {
-    width: 245px;
-    padding-left: 16px;
+  .woman__card5 {
+    grid-column: span 2;
+    grid-row: span 2;
   }
 }
 

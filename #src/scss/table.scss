@@ -442,31 +442,31 @@
 	//filter
 	.filter {
 		display: flex;
-		justify-content: flex-end;
-		margin-top: 26px;
+		justify-content:flex-end;
+		width: 100%;
+		padding-right: 3%;
 
-		//filter__block
-		&__block {
-			width: 206px;
-			padding: 13px;
-		}
 	}
-
-
-
-
-
+	//Form
+	.form {
+		width: 206px;
+	}
 
 	// ---------catalog---------
 	.woman {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-auto-flow: row dense; 
-		margin-top: 40px;
 	}
 	
 	  .woman__card5 {
 		grid-column: span 2;
 		grid-row: span 2;
 	  }
+
+	.card-load {
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 }
