@@ -20,7 +20,7 @@ testWebP(function (support) {
 
 // Меню бургер
 const burgerBth = document.querySelector('.burger-bth');
-const menuNav = document.querySelector('.menu__nav');
+const menuNav = document.querySelector('.menu__container');
 if (burgerBth) {
 	burgerBth.addEventListener("click", function (e) {
 		menuNav.classList.toggle('nav-active');
