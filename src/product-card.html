@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+    
     <title>Demin</title>
   </head>
   <body>
+	<!-- script -->
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">
+	</script>
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <!-- header -->
     <header class="header">
       <div class="header__inner">
@@ -39,7 +47,186 @@
 
     <!-- main  -->
     <main>
-    	
+
+				<section class="product">
+					<article class="product__card">
+						<div class="product__wrapper">
+							<div class="product__inner">
+								<div class="slider">
+									<div class="slider__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1_desk.jpg" width="400" height="523" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1_tab.jpg" width="324" height="360" alt="Jacket"
+											/>
+											<img src="img/pr_card-1_mob.jpg"  width="244" height="310" alt="Jacket">
+										</picture>
+									</div>
+									<div class="slider__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.1_desk.jpg" width="400" height="523" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.1_desk.jpg" width="324" height="360" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.1_desk.jpg"  width="244" height="310" alt="Jacket">
+										</picture>
+									</div>
+									<div class="slider__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.2_desk.jpg" width="400" height="523" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.2_desk.jpg" width="324" height="360" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.2_desk.jpg"  width="244" height="310" alt="Jacket">
+										</picture>
+									</div>
+									<div class="slider__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.3_desk.jpg" width="400" height="523" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.3_desk.jpg" width="324" height="360" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.3_desk.jpg"  width="244" height="310" alt="Jacket">
+										</picture>
+									</div>
+									<div class="slider__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.4_desk.jpg" width="400" height="523" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.4_desk.jpg" width="324" height="360" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.4_desk.jpg"  width="244" height="310" alt="Jacket">
+										</picture>
+									</div>
+								</div>
+								<!-- slider -->
+								<div class="table product__galery">
+									<div class="galery__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.1_desk.jpg" width="85" height="113" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.1_tab.jpg" width="151" height="99" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.1_desk.jpg"  width="244" height="310" alt="Jacket">
+											</picture>
+									</div>
+									<div class="galery__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.2_desk.jpg" width="85" height="113" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.2_tab.jpg" width="151" height="99" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.2_desk.jpg"  width="244" height="310" alt="Jacket">
+											</picture>
+									</div>
+									<div class="galery__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.3_desk.jpg" width="85" height="113" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.3_tab.jpg" width="151" height="99" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.3_desk.jpg"  width="244" height="310" alt="Jacket">
+											</picture>
+									</div>
+									<div class="galery__item">
+										<picture>
+											<source
+											media="(min-width: 1366px)"
+											srcset="img/pr_card-1.4_desk.jpg" width="85" height="113" alt="Jacket"
+											/>
+											<source
+											media="(min-width: 768px)"
+											srcset="img/pr_card-1.4_tab.jpg" width="151" height="99" alt="Jacket"
+											/>
+											<img src="img/pr_card-1.4_desk.jpg"  width="244" height="310" alt="Jacket">
+											</picture> 
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class=" description">
+							<div class="description__container">
+								<div class="description__inner">
+									<h2 class="description__tittle">Overalls</h2>
+									<p class="description__text">Overalls in washed organic cotton<br>
+										denim. Collar, button fly, 
+										and adjustable belt at waist. Chest pockets with flap. Long, 
+										gently flared sleeves and straight legs with front and back pockets.
+									</p>
+				
+									<form class="description__form">
+										<p class="description__desc">Color</p>
+										<input type="radio" id="color1" name="device">
+                        				<label for="color1" class="color1"></label>
+
+										<input type="radio" id="color2" name="device" >
+                       					<label for="color2" class="color2"></label>
+
+										   <input type="radio" id="color3" name="device">
+										   <label for="color3" class="color3"></label>
+									</form>
+
+									<div class="description__size">
+										<p class="description__desc">Size</p>
+										<ul class="description__list">
+											<li><a href="#">Xs</a></li>
+											<li><a href="#">S</a></li>
+											<li><a href="#">M</a></li>
+											<li><a href="#">L</a></li>
+											<li><a href="#">Xl</a></li>
+										</ul>
+									</div>
+
+									<p class="price">
+										$ 160
+									</p>
+
+									<button type="button" class="button">Add to cart</button>
+								</div>
+							</div>
+						</div>
+					
+					</article>
+				</section>
+			</div>
+		</div>
+
+
+		
+		
     </main>
 
     <!-- footer -->
@@ -114,9 +301,6 @@
 
 				
 			</footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+			<script src="js/script.js"></script>
   </body>
 </html>

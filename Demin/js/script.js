@@ -54,6 +54,32 @@ function checkedAll (form) {
 	}
 }
 
+  //slider
+  $(document).ready(function(){
+	$('.slider').slick({
+		responsive:[
+			{
+				breakpoint: 768,
+				settings:{
+					arrows: true
+				}
+				
+			},{
+				breakpoint: 1300,
+				settings:{
+					arrows: false
+				},
+				
+			}
+		]
+		
+	});
+})
+
+	  
+
+
+
 $("#slider-range").slider({
 	range: true,
 	min: 0,
@@ -71,3 +97,4 @@ $("#slider-range").slider({
   $("#rub-right").text($("#slider-range").slider("values", 1) + '$');
 
   //   -------------Form
+
