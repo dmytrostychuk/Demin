@@ -306,7 +306,6 @@
     }
 
     p {
-      margin-left: -19px;
       font-size: 32px;
     }
   }
@@ -321,7 +320,120 @@
   .woman__card5 {
     grid-column: span 2;
     grid-row: span 2;
+    width: 552px;
   }
 
-   // ---------product card---------
+  .woman__card {
+    width: 243px;
+  }
+
+  // ---------product card---------
+.slider {
+
+  .slick-arrow{
+    top: 36%;
+  }
+
+  .slick-arrow.slick-prev{
+    left: -75px;
+    background-image: url("../img/arrow-prev-desk.svg");
+  }
+
+  .slick-arrow.slick-next{
+    right: -75px;
+    background-image: url("../img/arrow-next-desk.svg");
+  }
+}
+
+  .product {
+    margin-top: 75px;
+    max-width: 1366px;
+
+    &__wrapper {
+      width: 400px;
+    }
+
+    &__galery {
+      
+      .galery__item {
+        margin-top: 20px;
+        margin-right: 20px;
+
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .description {
+    width: 52%;
+    margin-left: 47px;
+
+    &__container {
+      height: 656px;
+      width:calc(51vw - 30px);
+      margin-top: 0;
+    }
+
+    &__inner {
+      padding-top: 30px;
+      padding-left: 30px;
+      width: 400px;
+    }
+
+    &__tittle {
+      font-size: 32px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-top: 31px;
+      margin-bottom: 45px;
+    }
+
+    &__desc {
+      font-size: 18px;
+    }
+
+    &__form {
+      margin-bottom: 40px;
+      label {
+        margin-right: 47px;
+      }
+    }
+
+    &__list {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    
+    .price {
+      margin-bottom: 18px;
+    }
+  }
+
+  .slider {
+    text-align: start;
+  }
+
+  .product__items {
+    display: none;
+  }
+  
+  .like__text {
+      margin-top: 85px;
+      font-size: 32px;
+      font-family: "WorkSans-Bold";
+  }
+  
+  .product-like {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 65px;
+  }
+  
+  .product__block {
+  }
 }

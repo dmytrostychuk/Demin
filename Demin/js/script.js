@@ -28,6 +28,18 @@ if (burgerBth) {
 	});
 }
 
+$(document).ready(function(){
+	$(".product__items").slice(0, 4).show();
+	$(".view__all").on("click", function(e){
+	  e.preventDefault();
+	  $(".product__items:hidden").slice(0, 4).slideDown();
+	  if($(".product__items:hidden").length == 0) {
+		$(".view__all").text("No Content").addClass("no-сontent");
+	  }
+	});
+	
+  })
+
 
 $(document).ready(function(){
 	$(".woman__card").slice(0, 8).show();
@@ -40,6 +52,8 @@ $(document).ready(function(){
 	});
 	
   })
+
+  
 
 
 //   Form-------------

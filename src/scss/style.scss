@@ -279,7 +279,7 @@ a {
 
     &:hover,
     &:focus {
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 6px -6px 5px -5px rgba(34, 60, 80, 0.6);
       transition: 0.3s;
     }
 
@@ -353,6 +353,7 @@ a {
 // footer
 .footer {
   background-color: #151c22;
+  padding-bottom: 35px;
 
   &__inner {
     min-height: 230px;
@@ -1062,9 +1063,7 @@ display: flex;
     margin-bottom: 20px;
     margin-left: 0;
     font-size: 16px;
-
   }
-  
 }
 
 .price {
@@ -1072,3 +1071,43 @@ display: flex;
   font-size: 18px;
 }
 
+
+.product__items {
+  display: none;
+}
+
+.like__text {
+    margin-top: 77px;
+    font-size: 26px;
+    font-family: "WorkSans-Bold";
+}
+
+.product-like {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.view__all {
+  display: block;
+  padding: 2px 5px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #151C22;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.table {
+  display: none;
+}
