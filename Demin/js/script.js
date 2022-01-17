@@ -79,7 +79,7 @@ function checkedAll (form) {
 				}
 				
 			},{
-				breakpoint: 1300,
+				breakpoint: 1366,
 				settings:{
 					arrows: false
 				},
