@@ -18,8 +18,21 @@ body {
   font-family: "WorkSans-Medium";
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: #151c22;
+  transition: 0.3s all;
+}
+
+a:hover {
+  color: #242222b7;
+}
+
+a:active {
+  color: #0e0d0d50;
 }
 
 .table {
@@ -27,11 +40,11 @@ a {
 }
 
 .container {
-  margin: 0 4.8%;
+  margin: 0 15px;
 }
 
 .header__inner {
-  width: 320px;
+  max-width: 414px;
   margin: 0 auto;
 }
 
@@ -53,10 +66,6 @@ a {
   &__wrapper {
     padding-bottom: 74px;
     background-color: #f1f2f4;
-  }
-
-  //header__inner
-  &__inner {
   }
 
   //header__photo
@@ -121,7 +130,6 @@ a {
     }
 
     a {
-      padding: 25px 0;
       color: #151c22;
 
       &:hover,
@@ -145,13 +153,7 @@ a {
   .nav__search {
     content: "";
     position: absolute;
-    left: 0;
-    top: -4px;
-    width: 16px;
-    height: 16px;
-    padding: 13px;
-    background-image: url("../img/search.svg");
-    background-repeat: no-repeat;
+    padding: 2px;
   }
 
   .nav__basket {
@@ -165,6 +167,8 @@ a {
     background-image: url("../img/bask.svg");
     background-repeat: no-repeat;
   }
+
+  
 }
 
 .socials {
@@ -237,7 +241,7 @@ a {
   min-height: 1677px;
   //main__sellers
   &__sellers {
-    margin-top: 57px;
+    margin-top: 30px;
     font-family: "WorkSans-Bold";
     font-size: 26px;
 
@@ -253,16 +257,19 @@ a {
         opacity: 0.3;
       }
     }
+  }
 
-    .mobile {
-      width: 70px;
-      text-align: center;
-      margin: 0 auto;
-      margin-top: -49px;
-      font-family: "WorkSans-Medium";
-      font-size: 16px;
-      border-bottom: 2px solid #151c22;
-    }
+  &__sellers--view {
+    text-align: center;
+  }
+
+  .mobile {
+    width: 70px;
+    
+    margin: 0 auto;
+    font-family: "WorkSans-Medium";
+    font-size: 16px;
+    border-bottom: 2px solid #151c22;
   }
 }
 
@@ -271,16 +278,28 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 100%;
   margin-top: 35px;
   font-size: 16px;
+  
+  &__link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 
   &__cart {
+    position: relative;
+    width: 45%;
     margin-bottom: 28px;
+    transition: 0.3s;
 
     &:hover,
     &:focus {
       box-shadow: 6px -6px 5px -5px rgba(34, 60, 80, 0.6);
-      transition: 0.3s;
     }
 
     p {
@@ -291,27 +310,32 @@ a {
         font-family: "WorkSans-Bold";
         font-size: 14px;
       }
+
+      &:hover {
+        color: #000000;
+      }
     }
   }
 }
+
 
 // collection
 .collection {
   margin-top: 60px;
 
   &__wrap {
-    min-height: 226px;
+    max-width: 414px;
     padding-top: 10px;
     background-image: url("../img/diagonal-fall-mob.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
   }
 
   // collection__fashion
   &__fashion {
     position: relative;
-    bottom: -9px;
-    left: 15px;
-    width: 290px;
+    margin: 0 10px;
+    margin-top: 5px;
+    max-width: 414px;
     min-height: 207px;
     padding-top: 35px;
     text-align: center;
@@ -357,9 +381,9 @@ a {
 
   &__inner {
     min-height: 230px;
-    width: 320px;
+    max-width: 414px;
     margin: 0 auto;
-    
+
     color: #ffffff;
   }
 
@@ -408,6 +432,13 @@ a {
       font-size: 24px;
     }
   }
+}
+
+.button-arrow {
+ 
+}
+
+.arrow-down {
 }
 
 // social__list
@@ -467,13 +498,12 @@ a {
     align-items: center;
     background-color: #e5e5e5;
     border-radius: 5px;
-    
 
     li {
       width: 100%;
       text-align: center;
       border-bottom: 2px solid #ffffff;
-      
+
       &:nth-child(3) {
         border: none;
       }
@@ -519,7 +549,7 @@ a {
 //nav-active
 .nav-active {
   transform: translateY(0px);
-  
+
   .menu__list {
     display: flex;
     flex-direction: column;
@@ -857,8 +887,6 @@ a {
   //---------------Collection
 }
 
-
-
 //goods
 .woman {
   display: flex;
@@ -904,14 +932,13 @@ a {
 
 // Product card-----------------------------------
 
-
 .slider {
   display: flex;
   position: relative;
   text-align: center;
   min-width: 0;
-  
-  .slick-arrow{
+
+  .slick-arrow {
     position: absolute;
     top: 40%;
     width: 20px;
@@ -923,20 +950,19 @@ a {
     background-repeat: no-repeat;
   }
 
-
-  .slick-arrow.slick-prev{
+  .slick-arrow.slick-prev {
     left: -5px;
     background-image: url("../img/arrow-prev.svg");
   }
 
-  .slick-arrow.slick-next{
+  .slick-arrow.slick-next {
     right: -5px;
     background-image: url("../img/arrow-next.svg");
   }
 }
 
 .slick-track {
-display: flex;
+  display: flex;
 }
 
 .slick-list {
@@ -955,11 +981,9 @@ display: flex;
   }
 }
 
-
-
 .description {
-  background-color: #F1F2F4;
- 
+  background-color: #f1f2f4;
+
   &__container {
     width: 320px;
     margin: auto;
@@ -972,13 +996,13 @@ display: flex;
   &__tittle {
     padding-top: 35px;
     font-size: 26px;
-    font-family: 'WorkSans-Bold';
+    font-family: "WorkSans-Bold";
   }
 
   &__text {
     margin-top: 25px;
     font-size: 14px;
-    font-family: 'WorkSans-Regular';
+    font-family: "WorkSans-Regular";
     line-height: 116%;
   }
   &__desc {
@@ -994,7 +1018,7 @@ display: flex;
       display: none;
       visibility: hidden;
     }
-    
+
     label {
       cursor: pointer;
       position: relative;
@@ -1045,13 +1069,13 @@ display: flex;
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 28px;
-    
+
     a {
-      color: #727A82;
+      color: #727a82;
 
       &:hover {
         transition: 0.5s all;
-        color: #151C22;
+        color: #151c22;
       }
     }
   }
@@ -1067,19 +1091,18 @@ display: flex;
 }
 
 .price {
-  font-family: 'WorkSans-Bold';
+  font-family: "WorkSans-Bold";
   font-size: 18px;
 }
-
 
 .product__items {
   display: none;
 }
 
 .like__text {
-    margin-top: 77px;
-    font-size: 26px;
-    font-family: "WorkSans-Bold";
+  margin-top: 77px;
+  font-size: 26px;
+  font-family: "WorkSans-Bold";
 }
 
 .product-like {
@@ -1096,7 +1119,7 @@ display: flex;
   margin-bottom: 60px;
   font-size: 16px;
   background-color: #ffffff;
-  border-bottom: 2px solid #151C22;
+  border-bottom: 2px solid #151c22;
   transition: 0.3s;
 
   &:hover {

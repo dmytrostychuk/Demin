@@ -11,7 +11,6 @@
     display: block;
   }
 
-
   .header {
     &__name {
       padding: 22px 0;
@@ -19,7 +18,7 @@
 
     //header__inner
     &__inner {
-      width: 768px;
+      width: 750px;
       margin: 0 auto;
     }
 
@@ -133,14 +132,9 @@
     .arrow-down {
       content: "";
       position: absolute;
-      top: -21px;
-      left: -16px;
       width: 10px;
       height: 27px;
       padding: 20px;
-      background-image: url("../img/arrow-down.svg");
-      background-repeat: no-repeat;
-      background-position: center;
 
       &:hover,
       &:focus {
@@ -151,6 +145,10 @@
       &:active {
         color: #727a82;
         opacity: 0.3;
+      }
+
+      path:hover {
+        fill:red;
       }
     }
 
@@ -271,10 +269,9 @@
 
   // footer
   .footer {
-    
     &__inner {
       min-height: 230px;
-      width: 768px;
+      width: 750px;
     }
 
     &__copy {
@@ -352,7 +349,6 @@
 
     //menu__items
     &__items {
-      
       //menu__search
       .menu__search::before {
         left: 150px;
@@ -360,97 +356,97 @@
     }
   }
 
-    //top-collection
-    .top-collection {
-      margin-top: 10px;
-      background-color: #f1f2f4;
+  //top-collection
+  .top-collection {
+    margin-top: 10px;
+    background-color: #f1f2f4;
 
-      //main-nav
-      .main-nav {
+    //main-nav
+    .main-nav {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      &__photo {
         position: relative;
-        display: flex;
-        justify-content: space-between;
 
-        &__photo {
-          position: relative;
-
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-          }
-
-          &::before {
-            bottom: 0;
-            left: -30px;
-            width: 178px;
-            height: 135px;
-            background-image: url("../img/diagonal\ -catalog-1.svg");
-            background-repeat: no-repeat;
-          }
-
-          &::after {
-            z-index: 0;
-            top: 0;
-            right: 0px;
-            width: 232px;
-            height: 176px;
-            background-image: url("../img/diagonal\ -catalog-2.svg");
-            background-repeat: no-repeat;
-          }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
         }
 
-        img {
-          position: relative;
-          z-index: 1;
-          margin-right: 30px;
+        &::before {
+          bottom: 0;
+          left: -30px;
+          width: 178px;
+          height: 135px;
+          background-image: url("../img/diagonal\ -catalog-1.svg");
+          background-repeat: no-repeat;
+        }
+
+        &::after {
+          z-index: 0;
+          top: 0;
+          right: 0px;
+          width: 232px;
+          height: 176px;
+          background-image: url("../img/diagonal\ -catalog-2.svg");
+          background-repeat: no-repeat;
         }
       }
+
+      img {
+        position: relative;
+        z-index: 1;
+        margin-right: 30px;
+      }
     }
+  }
+
+  //main__nav
+  .main-nav {
+    width: 677px;
+    margin: 0 auto;
 
     //main__nav
-    .main-nav {
-      width: 677px;
-      margin: 0 auto;
-
-      //main__nav
-      &__list {
-        display: flex;
-        margin-top: 76px;
-        margin-bottom: 24px;
-      }
-
-      li {
-        margin-right: 11px;
-      }
-
-      p {
-        line-height: 125%;
-        font-family: "WorkSans-ExtraBold";
-        font-size: 28px;
-      }
-    }
-
-    //filter
-    .filter {
+    &__list {
       display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      padding-right: 3%;
-    }
-    //Form
-    .form {
-      width: 206px;
+      margin-top: 76px;
+      margin-bottom: 24px;
     }
 
-    // ---------catalog---------
+    li {
+      margin-right: 11px;
+    }
+
+    p {
+      line-height: 125%;
+      font-family: "WorkSans-ExtraBold";
+      font-size: 28px;
+    }
+  }
+
+  //filter
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 3%;
+  }
+  //Form
+  .form {
+    width: 206px;
+  }
+
+  // ---------catalog---------
   //menu
   .menu {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 23px;
-    
+
     &__container {
       position: relative;
       transform: translateY(0);
@@ -469,7 +465,7 @@
         width: 100%;
         text-align: center;
         border-bottom: none;
-        
+
         &:nth-child(3) {
           border: none;
         }
@@ -515,8 +511,7 @@
   //nav-active
   .nav-active {
     transform: translateY(0);
-    
-    
+
     .menu__list {
       display: flex;
       flex-direction: column;
@@ -524,28 +519,27 @@
     }
   }
 
+  .woman {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row dense;
+  }
 
-    .woman {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-auto-flow: row dense;
-    }
+  .woman__card5 {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 430px;
+  }
 
-    .woman__card5 {
-      grid-column: span 2;
-      grid-row: span 2;
-      width: 430px;
-    }
+  .woman__card {
+    width: 206px;
+  }
 
-    .woman__card {
-      width: 206px;
-    }
-
-    .card-load {
-      position: relative;
-      left: 50%;
-      transform: translate(-50%, 0);
-    }
+  .card-load {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 
   // ---------product card---------
   .product {
@@ -553,7 +547,6 @@
     margin-top: 55px;
     max-width: 768px;
     justify-content: center;
-    
 
     &__card {
       display: flex;
@@ -584,12 +577,12 @@
 
   .description {
     float: left;
-    background-color: #F1F2F4;
+    background-color: #f1f2f4;
     height: 602px;
 
     &__container {
-      background-color: #F1F2F4;
-      width:calc(52vw - 42px);
+      background-color: #f1f2f4;
+      width: calc(52vw - 42px);
       margin-top: 13px;
     }
 
@@ -622,7 +615,7 @@
       font-size: 18px;
       margin-top: 10px;
     }
-    
+
     .price {
       margin-bottom: 18px;
     }
@@ -651,7 +644,6 @@
   .product__block {
     display: flex;
     justify-content: space-between;
-    
 
     .table {
       font-size: 18px;
