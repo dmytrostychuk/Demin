@@ -366,7 +366,7 @@ a:active {
 }
 
 .main__sellers {
-  margin-top: 30px;
+  margin-top: 50px;
   font-family: "WorkSans-Bold";
   font-size: 26px;
 }
@@ -386,14 +386,25 @@ a:active {
 
 .main__sellers--view {
   text-align: center;
+  margin-top: 10px;
 }
 
 .main .mobile {
-  width: 70px;
   margin: 0 auto;
   font-family: "WorkSans-Medium";
   font-size: 16px;
   border-bottom: 2px solid #151c22;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main .mobile:hover {
+  opacity: 0.5;
+}
+
+.main .mobile:active {
+  opacity: 0.3;
 }
 
 .bestsellers {
@@ -417,6 +428,10 @@ a:active {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.bestsellers__link--name {
+  padding-top: 20px;
 }
 
 .bestsellers__cart {
@@ -446,6 +461,10 @@ a:active {
 
 .bestsellers__cart p:hover {
   color: #000000;
+}
+
+.product__items--bootom {
+  display: none;
 }
 
 .collection {
@@ -1330,7 +1349,8 @@ a:active {
   margin-top: 35px;
 }
 
-.view__all {
+.view__all,
+.view__all--bottom {
   display: block;
   padding: 2px 5px;
   margin: 0 auto;
@@ -1338,16 +1358,18 @@ a:active {
   font-size: 16px;
   background-color: #ffffff;
   border-bottom: 2px solid #151c22;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0, 3s all;
+  -o-transition: 0, 3s all;
+  transition: 0, 3s all;
 }
 
-.view__all:hover {
+.view__all:hover,
+.view__all--bottom:hover {
   opacity: 0.3;
 }
 
-.view__all:active {
+.view__all:active,
+.view__all--bottom:active {
   opacity: 0.1;
 }
 

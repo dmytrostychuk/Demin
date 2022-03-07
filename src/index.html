@@ -9,6 +9,12 @@
 </head>
 
 <body>
+	<!-- script -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+		</script>
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 	<header class="header">
 		<div class="header__name">
 			<h1 class="header__tittle">
@@ -87,7 +93,7 @@
 				<!-- catalog -->
 				<section class="main__bestsellers bestsellers">
 					<!-- card-1 -->
-					<article class="bestsellers__cart">
+					<article class="bestsellers__cart product__items">
 						<picture>
 							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-1-desk.jpg" width="270" height="349"
 								alt="Jacket" />
@@ -101,7 +107,7 @@
 						</a>
 					</article>
 					<!-- card-2 -->
-					<article class="bestsellers__cart">
+					<article class="bestsellers__cart product__items">
 						<picture>
 							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-2-desk.jpg" width="270" height="349"
 								alt="Overalls" />
@@ -115,7 +121,7 @@
 						</a>
 					</article>
 					<!-- card-3 -->
-					<article class="bestsellers__cart">
+					<article class="bestsellers__cart product__items">
 						<picture>
 							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-3-desk.jpg" width="270" height="349"
 								alt="Jacket" />
@@ -131,7 +137,7 @@
 						</a>
 					</article>
 					<!-- card-4 -->
-					<article class="bestsellers__cart">
+					<article class="bestsellers__cart product__items">
 						<picture>
 							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-4-desk.jpg" width="270" height="349"
 								alt="Overalls" />
@@ -143,15 +149,79 @@
 						</picture>
 
 						<a class="bestsellers__link" href="product-card.html">
-
 							<p>Overalls</p>
 							<p>$ 160</p>
 						</a>
 					</article>
+
+					<!-- card-5 -->
+					<article class="bestsellers__cart product__items">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-1-desk.jpg" width="270" height="349"
+								alt="Jacket" />
+							<source media="(min-width: 768px)" srcset="img/main-page_bestsellers-1-tab.jpg" width="324" height="349"
+								alt="Jacket" />
+							<img src="img/main-page_bestsellers-1-mob.jpg" width="auto" height="auto" alt="Jacket">
+						</picture>
+						<a class="bestsellers__link" href="product-card.html">
+							<p>Jacket</p>
+							<p>$ 120</p>
+						</a>
+					</article>
+					<!-- card-6 -->
+					<article class="bestsellers__cart product__items">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-2-desk.jpg" width="270" height="349"
+								alt="Overalls" />
+							<source media="(min-width: 768px)" srcset="img/main-page_bestsellers-2-tab.jpg" width="324" height="349"
+								alt="Overalls" />
+							<img src="img/main-page_bestsellers-2-mob.jpg" width="auto" height="auto" alt="Overalls">
+						</picture>
+						<a class="bestsellers__link" href="product-card.html">
+							<p>Overalls</p>
+							<p>$ 140</p>
+						</a>
+					</article>
+					<!-- card-7 -->
+					<article class="bestsellers__cart product__items">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-3-desk.jpg" width="270" height="349"
+								alt="Jacket" />
+
+							<source media="(min-width: 768px)" srcset="img/main-page_bestsellers-3-tab.jpg" width="324" height="349"
+								alt="Jacket" />
+
+							<img src="img/main-page_bestsellers-3-mob.jpg" width="auto" height="auto" alt="Jacket">
+						</picture>
+						<a class="bestsellers__link" href="product-card.html">
+							<p>Jacket</p>
+							<p>$ 90</p>
+						</a>
+					</article>
+					<!-- card-8 -->
+					<article class="bestsellers__cart product__items">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_bestsellers-4-desk.jpg" width="270" height="349"
+								alt="Overalls" />
+
+							<source media="(min-width: 768px)" srcset="img/main-page_bestsellers-4-tab.jpg" width="324" height="349"
+								alt="Overalls" />
+
+							<img src="img/main-page_bestsellers-4-mob.jpg" width="auto" height="auto" alt="Overalls">
+						</picture>
+
+						<a class="bestsellers__link" href="product-card.html">
+							<p>Overalls</p>
+							<p>$ 160</p>
+						</a>
+					</article>
+
+
 				</section>
 				<!-- main__sellers -->
+
 				<div class="main__sellers main__sellers--view">
-					<a class="mobile" href="#">View all</a>
+					<button class="mobile view__all">View all</button>
 				</div>
 			</div>
 			<!-- collection -->
@@ -183,70 +253,124 @@
 				<section class="main__bestsellers bestsellers category">
 
 					<!-- card-1 -->
-					<article class="bestsellers__cart">
-						<a href="product-card.html">
-							<picture>
-								<source media="(min-width: 1366px)" srcset="img/main-page_category-1-desk.jpg" width="270" height="349"
-									alt="Jeans" />
-								<source media="(min-width: 768px)" srcset="img/main-page_category-1-tab.jpg" width="324" height="349"
-									alt="Jeans" />
-								<img src="img/main-page_category-1-mob.jpg" width="130" height="160" alt="Jeans">
-							</picture>
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-1-desk.jpg" width="270" height="349"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-1-tab.jpg" width="324" height="349"
+								alt="Jeans" />
+							<img src="img/main-page_category-1-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Jeans</p>
 						</a>
-
-						<p class="category__name">Jeans</p>
 					</article>
 
 					<!-- card-2 -->
-					<article class="bestsellers__cart">
-						<a href="product-card.html">
-							<picture>
-								<source media="(min-width: 1366px)" srcset="img/main-page_category-2-desk.jpg" width="270" height="290"
-									alt="Jeans" />
-								<source media="(min-width: 768px)" srcset="img/main-page_category-2-tab.jpg" width="324" height="290"
-									alt="Jeans" />
-								<img src="img/main-page_category-2-mob.jpg" width="130" height="126" alt="Jeans">
-							</picture>
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-2-desk.jpg" width="270" height="290"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-2-tab.jpg" width="324" height="290"
+								alt="Jeans" />
+							<img src="img/main-page_category-2-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Shirts</p>
 						</a>
-
-						<p class="category__name">Shirts</p>
 					</article>
 
 					<!-- card-3 -->
-					<article class="bestsellers__cart">
-						<a href="product-card.html">
-							<picture>
-								<source media="(min-width: 1366px)" srcset="img/main-page_category-3-desk.jpg" width="270" height="349"
-									alt="Jeans" />
-								<source media="(min-width: 768px)" srcset="img/main-page_category-3-tab.jpg" width="324" height="290"
-									alt="Jeans" />
-								<img src="img/main-page_category-3-mob.jpg" width="130" height="126" alt="Jeans">
-							</picture>
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-3-desk.jpg" width="270" height="349"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-3-tab.jpg" width="324" height="290"
+								alt="Jeans" />
+							<img src="img/main-page_category-3-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Jackets</p>
 						</a>
-
-						<p class="category__name">Jackets</p>
 					</article>
 
 					<!-- card-4 -->
-					<article class="bestsellers__cart bestsellers__cart4">
+					<article class="bestsellers__cart bestsellers__cart4 product__items--bootom">
 						<a href="product-card.html">
 							<picture>
 								<source media="(min-width: 1366px)" srcset="img/main-page_category-4-desk.jpg" width="270" height="290"
 									alt="Jeans" />
 								<source media="(min-width: 768px)" srcset="img/main-page_category-4-tab.jpg" width="324" height="349"
 									alt="Jeans" />
-								<img src="img/main-page_category-4-mob.jpg" width="130" height="160" alt="Jeans">
+								<img src="img/main-page_category-4-mob.jpg" width="auto" height="auto" alt="Jeans">
 							</picture>
-						</a>
+							<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+								<p>Overalls</p>
+							</a>
+					</article>
 
-						<p class="category__name">Overalls</p>
+					<!-- card-5 -->
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-1-desk.jpg" width="270" height="349"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-1-tab.jpg" width="324" height="349"
+								alt="Jeans" />
+							<img src="img/main-page_category-1-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Jeans</p>
+						</a>
+					</article>
+
+					<!-- card-6 -->
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-2-desk.jpg" width="270" height="290"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-2-tab.jpg" width="324" height="290"
+								alt="Jeans" />
+							<img src="img/main-page_category-2-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Shirts</p>
+						</a>
+					</article>
+
+					<!-- card-7 -->
+					<article class="bestsellers__cart product__items--bootom">
+						<picture>
+							<source media="(min-width: 1366px)" srcset="img/main-page_category-3-desk.jpg" width="270" height="349"
+								alt="Jeans" />
+							<source media="(min-width: 768px)" srcset="img/main-page_category-3-tab.jpg" width="324" height="290"
+								alt="Jeans" />
+							<img src="img/main-page_category-3-mob.jpg" width="auto" height="auto" alt="Jeans">
+						</picture>
+						<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+							<p>Jackets</p>
+						</a>
+					</article>
+
+					<!-- card-8 -->
+					<article class="bestsellers__cart bestsellers__cart4 product__items--bootom">
+						<a href="product-card.html">
+							<picture>
+								<source media="(min-width: 1366px)" srcset="img/main-page_category-4-desk.jpg" width="270" height="290"
+									alt="Jeans" />
+								<source media="(min-width: 768px)" srcset="img/main-page_category-4-tab.jpg" width="324" height="349"
+									alt="Jeans" />
+								<img src="img/main-page_category-4-mob.jpg" width="auto" height="auto" alt="Jeans">
+							</picture>
+							<a class="bestsellers__link bestsellers__link--name" href="product-card.html">
+								<p>Overalls</p>
+							</a>
 					</article>
 
 				</section>
 
 				<!-- main__sellers -->
 				<div class="main__sellers">
-					<p class="mobile"><a href="#">View all</a></p>
+					<button class="mobile view__all--bottom">View all</button>
 				</div>
 			</div>
 		</div>
@@ -332,6 +456,7 @@
 
 
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
