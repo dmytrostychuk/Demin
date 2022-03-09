@@ -238,10 +238,9 @@ a:active {
 
 //main
 .main {
-  min-height: 1677px;
   //main__sellers
   &__sellers {
-    margin-top: 50px;
+    margin-top: 40px;
     font-family: "WorkSans-Bold";
     font-size: 26px;
 
@@ -268,7 +267,6 @@ a:active {
     margin: 0 auto;
     font-family: "WorkSans-Medium";
     font-size: 16px;
-    border-bottom: 2px solid #151c22;
     transition: .3s;
 
     &:hover {
@@ -396,7 +394,6 @@ a:active {
   padding-bottom: 35px;
 
   &__inner {
-    min-height: 230px;
     max-width: 414px;
     margin: 0 auto;
 
@@ -423,6 +420,7 @@ a:active {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 53px;
+  margin-top: 60px;
 
   a {
     color: #ffffff;

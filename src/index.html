@@ -64,10 +64,15 @@
 					<!-- header__copy -->
 					<div class="header__copy">
 						<!-- button-arrow -->
-						<button class="button-arrow">
-							<a href="#" class="arrow-down">
-							</a>
-						</button>
+
+						<a href="#" class="arrow-down table">
+							<svg width="12" height="29" viewBox="0 0 12 29" xmlns="http://www.w3.org/2000/svg">
+								<path fill="#151C22" d="M6 0V17V27M6 27L11 21M6 27L1 21" stroke-width="2" />
+							</svg>
+
+						</a>
+
+
 						<!-- table -->
 						<div class="social table">
 							<ul class="socials">
@@ -88,7 +93,9 @@
 				<!-- main__sellers -->
 				<div class="main__sellers">
 					<p>Bestsellers</p>
-					<p class="table"><a href="#">View all</a></p>
+					<div class="main__sellers--view table">
+						<button class="view__all">View all</button>
+					</div>
 				</div>
 				<!-- catalog -->
 				<section class="main__bestsellers bestsellers">
@@ -220,8 +227,8 @@
 				</section>
 				<!-- main__sellers -->
 
-				<div class="main__sellers main__sellers--view">
-					<button class="mobile view__all">View all</button>
+				<div class="mobile main__sellers main__sellers--view">
+					<button class=" view__all">View all</button>
 				</div>
 			</div>
 			<!-- collection -->
@@ -235,9 +242,9 @@
 					</div>
 				</div>
 				<picture>
-					<source media="(min-width: 1366px)" srcset="img/main-page_fashion-col-desk.jpg" width="700" height="370"
+					<source media="(min-width: 1366px)" srcset="img/main-page_fashion-col-desk.jpg" width="800" height="370"
 						alt="Overalls" />
-					<source media="(min-width: 768px)" srcset="img/main-page_fashion-col-tab.jpg" width="354" height="287"
+					<source media="(min-width: 768px)" srcset="img/main-page_fashion-col-tab.jpg" width="auto" height="auto"
 						alt="Overalls" />
 					<img src="img/main-page_fashion-col-mob.jpg" width="100%" height="100%" alt="Overalls">
 				</picture>
@@ -246,7 +253,8 @@
 				<!-- main__sellers -->
 				<div class="main__sellers">
 					<p>Shop by category</p>
-					<p class="table"><a href="#">View all</a></p>
+
+					<button class="table view__all--bottom">View all</button>
 				</div>
 
 				<!-- catalog -->
@@ -369,7 +377,7 @@
 				</section>
 
 				<!-- main__sellers -->
-				<div class="main__sellers">
+				<div class="main__sellers mobile">
 					<button class="mobile view__all--bottom">View all</button>
 				</div>
 			</div>

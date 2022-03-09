@@ -1,6 +1,6 @@
 @media (min-width: 768px) {
   .container {
-    margin: 0 6%;
+    margin: 0 15px;
   }
 
   .mobile {
@@ -18,7 +18,7 @@
 
     //header__inner
     &__inner {
-      width: 750px;
+      max-width: 750px;
       margin: 0 auto;
     }
 
@@ -33,7 +33,7 @@
       min-height: 379px;
       width: 323px;
       margin: 0 0 0 0;
-      top: -19px;
+      top: -10px;
 
       img {
         width: 264px;
@@ -64,8 +64,10 @@
 
   //nav
   .nav {
+    padding-top: 25px;
     &__list {
       padding: 15px 0;
+      margin-top: 0;
 
       li {
         padding-right: 35px;
@@ -79,7 +81,7 @@
     .desktop {
       .nav__search {
         left: -11px;
-        top: 10px;
+        top: 0px;
         width: 18px;
         height: 18px;
         padding: 13px;
@@ -87,7 +89,7 @@
 
       .nav__basket {
         right: -5px;
-        top: 10px;
+        top: 12px;
         width: 11px;
         height: 11px;
         padding: 13px;
@@ -127,29 +129,19 @@
     display: flex;
     justify-content: space-between;
     margin-top: 18px;
+    align-items: center;
 
     // arrow-down
     .arrow-down {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 27px;
-      padding: 20px;
+        stroke: #151c22;
 
-      &:hover,
-      &:focus {
-        color: #727a82;
-        transition: 0.3s;
-      }
+        &:hover {
+          opacity: 0.5;
+        }
 
-      &:active {
-        color: #727a82;
-        opacity: 0.3;
-      }
-
-      path:hover {
-        fill:red;
-      }
+        &:active {
+          opacity: 0.3;
+        }
     }
 
     // social
@@ -163,16 +155,11 @@
       &__item {
         padding-left: 35px;
       }
-
-      a {
-        padding: 15px 0;
-      }
     }
   }
 
   //main
   .main {
-    min-height: 2430px;
   }
 
   //main__sellers
@@ -180,17 +167,11 @@
     display: flex;
     justify-content: space-between;
     font-size: 28px;
-
-    p {
-      margin-top: 40px;
-    }
+    margin-top: 50px;
+    
 
     .table {
-      padding: 0 5px;
-      margin-bottom: 5px;
       font-family: "WorkSans-Medium";
-      font-size: 18px;
-      border-bottom: 2px solid #151c22;
     }
   }
 
@@ -213,37 +194,45 @@
     }
   }
 
+  .view__all {
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  .main__sellers--view {
+    margin-top: 0;
+  }
+
   // collection
   .collection {
     display: flex;
     flex-direction: row-reverse;
-    width: 678px;
-    margin: 0 auto;
-    margin-top: -6px;
+    max-width: 750px;
+    margin: 0 15px;
 
     &__wrap {
-      width: 324px;
-      min-height: 287px;
+      width: 80%;
       padding-top: 0;
       background-image: url("../img/diagonal-fall-tab.svg");
     }
 
     // collection__fashion
     &__fashion {
-      top: 20px;
+      margin: 0;
+      top: 25px;
       left: 0;
       width: 304px;
-      min-height: 247px;
-      padding-top: 47px;
+      min-height: 280px;
+      vertical-align: middle;
       text-align: start;
     }
 
     p {
       margin-left: 49px;
-      margin-bottom: 7px;
+      margin-bottom: 20px;
 
       &:nth-last-child(2) {
-        padding-bottom: 46px;
+        padding-bottom: 75px;
         font-size: 32px;
       }
     }
@@ -266,12 +255,17 @@
       }
     }
   }
+  
+  .view__all--bottom {
+    margin: 0;
+    transition: 0.3s;
+  }
 
   // footer
   .footer {
+    margin-top: 50px;
     &__inner {
-      min-height: 230px;
-      width: 750px;
+      min-width: 750px;
     }
 
     &__copy {
@@ -644,13 +638,6 @@
   .product__block {
     display: flex;
     justify-content: space-between;
-
-    .table {
-      font-size: 18px;
-      margin: 0;
-      padding: 2px 5px;
-      padding-top: 60px;
-      vertical-align: middle;
-    }
+    
   }
 }

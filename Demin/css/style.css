@@ -361,12 +361,8 @@ a:active {
   color: #151c22;
 }
 
-.main {
-  min-height: 1677px;
-}
-
 .main__sellers {
-  margin-top: 50px;
+  margin-top: 40px;
   font-family: "WorkSans-Bold";
   font-size: 26px;
 }
@@ -393,7 +389,6 @@ a:active {
   margin: 0 auto;
   font-family: "WorkSans-Medium";
   font-size: 16px;
-  border-bottom: 2px solid #151c22;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -525,7 +520,6 @@ a:active {
 }
 
 .footer__inner {
-  min-height: 230px;
   max-width: 414px;
   margin: 0 auto;
   color: #ffffff;
@@ -554,6 +548,7 @@ a:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 53px;
+  margin-top: 60px;
 }
 
 .mobile__copy a {
@@ -1379,7 +1374,7 @@ a:active {
 
 @media (min-width: 768px) {
   .container {
-    margin: 0 6%;
+    margin: 0 15px;
   }
 
   .mobile {
@@ -1395,7 +1390,7 @@ a:active {
   }
 
   .header__inner {
-    width: 750px;
+    max-width: 750px;
     margin: 0 auto;
   }
 
@@ -1408,7 +1403,7 @@ a:active {
     min-height: 379px;
     width: 323px;
     margin: 0 0 0 0;
-    top: -19px;
+    top: -10px;
   }
 
   .header__photo img {
@@ -1437,8 +1432,13 @@ a:active {
     background-image: url("../img/diagonal-2_table.svg");
   }
 
+  .nav {
+    padding-top: 25px;
+  }
+
   .nav__list {
     padding: 15px 0;
+    margin-top: 0;
   }
 
   .nav__list li {
@@ -1451,7 +1451,7 @@ a:active {
 
   .nav .desktop .nav__search {
     left: -11px;
-    top: 10px;
+    top: 0px;
     width: 18px;
     height: 18px;
     padding: 13px;
@@ -1459,7 +1459,7 @@ a:active {
 
   .nav .desktop .nav__basket {
     right: -5px;
-    top: 10px;
+    top: 12px;
     width: 11px;
     height: 11px;
     padding: 13px;
@@ -1505,31 +1505,21 @@ a:active {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 18px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .header__copy .arrow-down {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 27px;
-    padding: 20px;
+    stroke: #151c22;
   }
 
-  .header__copy .arrow-down:hover,
-  .header__copy .arrow-down:focus {
-    color: #727a82;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+  .header__copy .arrow-down:hover {
+    opacity: 0.5;
   }
 
   .header__copy .arrow-down:active {
-    color: #727a82;
     opacity: 0.3;
-  }
-
-  .header__copy .arrow-down path:hover {
-    fill: red;
   }
 
   .header__copy .social__list {
@@ -1544,14 +1534,6 @@ a:active {
     padding-left: 35px;
   }
 
-  .header__copy .social a {
-    padding: 15px 0;
-  }
-
-  .main {
-    min-height: 2430px;
-  }
-
   .main__sellers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1560,18 +1542,11 @@ a:active {
         -ms-flex-pack: justify;
             justify-content: space-between;
     font-size: 28px;
-  }
-
-  .main__sellers p {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .main__sellers .table {
-    padding: 0 5px;
-    margin-bottom: 5px;
     font-family: "WorkSans-Medium";
-    font-size: 18px;
-    border-bottom: 2px solid #151c22;
   }
 
   .bestsellers {
@@ -1592,6 +1567,17 @@ a:active {
     font-size: 16px;
   }
 
+  .view__all {
+    margin: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .main__sellers--view {
+    margin-top: 0;
+  }
+
   .collection {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1600,34 +1586,33 @@ a:active {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    width: 678px;
-    margin: 0 auto;
-    margin-top: -6px;
+    max-width: 750px;
+    margin: 0 15px;
   }
 
   .collection__wrap {
-    width: 324px;
-    min-height: 287px;
+    width: 80%;
     padding-top: 0;
     background-image: url("../img/diagonal-fall-tab.svg");
   }
 
   .collection__fashion {
-    top: 20px;
+    margin: 0;
+    top: 25px;
     left: 0;
     width: 304px;
-    min-height: 247px;
-    padding-top: 47px;
+    min-height: 280px;
+    vertical-align: middle;
     text-align: start;
   }
 
   .collection p {
     margin-left: 49px;
-    margin-bottom: 7px;
+    margin-bottom: 20px;
   }
 
   .collection p:nth-last-child(2) {
-    padding-bottom: 46px;
+    padding-bottom: 75px;
     font-size: 32px;
   }
 
@@ -1648,9 +1633,19 @@ a:active {
     font-size: 18px;
   }
 
+  .view__all--bottom {
+    margin: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+
   .footer__inner {
-    min-height: 230px;
-    width: 750px;
+    min-width: 750px;
   }
 
   .footer__copy {
@@ -2065,14 +2060,6 @@ a:active {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-
-  .product__block .table {
-    font-size: 18px;
-    margin: 0;
-    padding: 2px 5px;
-    padding-top: 60px;
-    vertical-align: middle;
-  }
 }
 
 @media (min-width: 1366px) {
@@ -2080,16 +2067,12 @@ a:active {
     display: none;
   }
 
-  .container {
-    margin: 0 7.1%;
-  }
-
   .header__wrapper {
     padding-bottom: 0;
   }
 
   .header__inner {
-    width: 1366px;
+    max-width: 1366px;
     margin: 0 auto;
   }
 
@@ -2226,24 +2209,15 @@ a:active {
     padding: 15px 0;
   }
 
-  .main {
-    min-height: 1814px;
-  }
-
   .main__sellers {
     font-size: 32px;
-  }
-
-  .main__sellers p {
-    margin-top: 66px;
+    width: 100%;
+    margin-top: 100px;
   }
 
   .main__sellers .table {
-    padding: 4px 7px 0 5px;
-    margin-bottom: 5px;
     font-family: "WorkSans-Medium";
     font-size: 18px;
-    border-bottom: 2px solid #151c22;
   }
 
   .bestsellers {
@@ -2252,7 +2226,8 @@ a:active {
   }
 
   .bestsellers__cart {
-    margin-bottom: 47px;
+    width: auto;
+    margin-bottom: 0;
   }
 
   .bestsellers__cart p {
@@ -2265,19 +2240,21 @@ a:active {
   }
 
   .collection {
-    width: 1170px;
-    margin-top: 23px;
+    max-width: 1366px;
+    margin-top: 80px;
   }
 
   .collection__wrap {
-    width: 470px;
+    max-width: 550px;
     min-height: 370px;
     background-image: url("../img/diagonal-fall-desk.svg");
+    background-repeat: round;
   }
 
   .collection__fashion {
     top: 30px;
-    width: 400px;
+    width: 485px;
+    max-width: 485px;
     min-height: 308px;
     padding-top: 70px;
   }
@@ -2309,7 +2286,7 @@ a:active {
   }
 
   .footer__inner {
-    min-height: 222px;
+    max-width: 1366px;
   }
 
   .footer__copy {
