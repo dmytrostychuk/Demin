@@ -605,6 +605,12 @@ a:active {
   margin: 0 auto;
 }
 
+.active-link {
+  border-bottom: 2px solid #151c22c9;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .menu {
   position: relative;
   display: -webkit-box;
@@ -613,7 +619,7 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 23px;
+  margin: 25px 0;
 }
 
 .menu__nav {
@@ -624,12 +630,12 @@ a:active {
 .menu__container {
   position: relative;
   z-index: 1;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateY(-1000px);
-      -ms-transform: translateY(-1000px);
-          transform: translateY(-1000px);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-300px);
+      -ms-transform: translateY(-300px);
+          transform: translateY(-300px);
 }
 
 .menu__list {
@@ -669,32 +675,26 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
-  width: 100px;
 }
 
-.menu__items .menu__search::before,
-.menu__items .menu__basket::after {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 20px;
+.menu__items a:last-child {
+  margin-left: 20px;
 }
 
-.menu__items .menu__search::before {
-  top: 0;
-  left: 35px;
-  background-image: url("../img/search-catalog.svg");
+.menu a:hover {
+  opacity: 0.5;
 }
 
-.menu__items .menu__basket::after {
-  top: 0;
-  right: -10px;
-  background-image: url("../img/bask-catalog.svg");
+.menu a:active {
+  opacity: 0.3;
 }
 
 .nav-active {
+  z-index: 2;
   -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
@@ -728,6 +728,9 @@ a:active {
   width: 20px;
   margin-left: -10px;
   background-color: #151c22;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .burger-bth::before,
@@ -787,6 +790,7 @@ a:active {
   display: block;
   width: 100%;
   font-size: 18px;
+  z-index: 1;
 }
 
 .form__inner {
@@ -796,10 +800,12 @@ a:active {
 
 .form input {
   display: none;
-  visibility: hidden;
 }
 
 .form__filter:checked ~ .form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   opacity: 1;
   background-color: #ffffff;
   border-top: none;
@@ -807,23 +813,25 @@ a:active {
   -webkit-transform: translateX(0%);
       -ms-transform: translateX(0%);
           transform: translateX(0%);
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .form__filter:checked ~ .form__close {
   border-bottom: 2px solid #151c22;
 }
 
-.form__filter:checked ~ .form__apply {
-  background-color: #151c22;
-}
-
 .checkbox2:checked ~ .form__price-content {
   min-height: 70px;
   font-size: 14px;
   opacity: 0.9;
-  -webkit-transform: translateX(0px);
-      -ms-transform: translateX(0px);
-          transform: translateX(0px);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .checkbox3:checked ~ .form__color-content,
@@ -842,6 +850,9 @@ a:active {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .form__filter:checked ~ .first,
@@ -851,6 +862,9 @@ a:active {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .form__filter:checked ~ .second,
@@ -860,6 +874,9 @@ a:active {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .form__tittle {
@@ -870,9 +887,7 @@ a:active {
 }
 
 .form__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -880,7 +895,6 @@ a:active {
   position: relative;
   width: 100%;
   font-size: 0;
-  overflow: hidden;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: 0.5s all;
@@ -889,11 +903,16 @@ a:active {
       -ms-transform: translateY(500%);
           transform: translateY(500%);
   border: 2px solid #151c22;
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  z-index: 0;
 }
 
 .form .content-text {
   padding-top: 15px;
   padding-left: 15px;
+  cursor: pointer;
 }
 
 .form__content {
@@ -903,9 +922,9 @@ a:active {
   font-size: 0;
   padding: 10px;
   overflow: hidden;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.1s all;
+  -o-transition: 0.1s all;
+  transition: 0.1s all;
 }
 
 .form__line {
@@ -913,21 +932,18 @@ a:active {
   width: 10px;
   height: 2px;
   background-color: #000000;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
 }
 
 .form .first {
-  top: 20px;
-  right: 19px;
+  top: 24px;
+  right: 18px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .form .second {
-  top: 20px;
+  top: 24px;
   right: 12px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -936,6 +952,9 @@ a:active {
 
 .form__apply {
   background-color: #151c22;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .form .apply {
@@ -955,9 +974,9 @@ a:active {
 }
 
 .form .form__price-content {
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.1s all;
+  -o-transition: 0.1s all;
+  transition: 0.1s all;
   opacity: 0;
   -webkit-transform: translateY(500%);
       -ms-transform: translateY(500%);
@@ -1001,6 +1020,9 @@ a:active {
   right: 30%;
   top: 30%;
   border-radius: 50%;
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .form .form__color-content .color1::before {
@@ -1030,17 +1052,17 @@ a:active {
 .form .form__color-content input[type=radio]:checked + label:before {
   width: 16px;
   height: 16px;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
 }
 
 .form .form__color-content label:hover:before {
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.7);
 }
@@ -1055,9 +1077,9 @@ a:active {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
   opacity: 0;
   -webkit-transform: translateY(500%);
       -ms-transform: translateY(500%);
@@ -1097,12 +1119,13 @@ a:active {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .woman__card5 {
   grid-column: span 2;
   grid-row: span 2;
+  width: 100%;
 }
 
 .woman__card {
@@ -1114,7 +1137,6 @@ a:active {
   left: 50%;
   height: 66px;
   margin-top: 30px;
-  margin-bottom: 60px;
   padding: 25px 50px;
   color: #ffffff;
   background-color: #151c22;
@@ -2311,7 +2333,6 @@ a:active {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: -25px;
   }
 
   .catalog__inner {

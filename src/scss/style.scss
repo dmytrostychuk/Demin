@@ -56,19 +56,16 @@ a:active {
     text-align: center;
   }
 
-  // header__tittle
   &__tittle {
     font-family: "WorkSans-ExtraBold";
     font-size: 24px;
   }
 
-  // header__wrapper
   &__wrapper {
     padding-bottom: 74px;
     background-color: #f1f2f4;
   }
 
-  //header__photo
   &__photo {
     position: relative;
     min-height: 290px;
@@ -108,7 +105,6 @@ a:active {
   }
 }
 
-//nav
 .nav {
   display: flex;
   justify-content: space-between;
@@ -145,7 +141,6 @@ a:active {
   }
 }
 
-//desktop
 .desktop {
   position: relative;
   width: 65px;
@@ -167,8 +162,6 @@ a:active {
     background-image: url("../img/bask.svg");
     background-repeat: no-repeat;
   }
-
-  
 }
 
 .socials {
@@ -190,7 +183,6 @@ a:active {
   }
 }
 
-//new-collection
 .new-collection {
   margin: 0 auto;
   margin-top: 27px;
@@ -202,7 +194,6 @@ a:active {
     color: #727a82;
   }
 
-  //denim
   &__denim {
     margin-top: 8px;
     margin-bottom: 57px;
@@ -238,7 +229,7 @@ a:active {
 
 //main
 .main {
-  //main__sellers
+  
   &__sellers {
     margin-top: 40px;
     font-family: "WorkSans-Bold";
@@ -279,7 +270,6 @@ a:active {
   }
 }
 
-//bestsellers
 .bestsellers {
   display: flex;
   justify-content: space-between;
@@ -332,8 +322,6 @@ a:active {
   display: none;
 }
 
-
-// collection
 .collection {
   margin-top: 60px;
 
@@ -344,7 +332,6 @@ a:active {
     background-repeat: repeat;
   }
 
-  // collection__fashion
   &__fashion {
     position: relative;
     margin: 0 10px;
@@ -374,7 +361,6 @@ a:active {
   }
 }
 
-//category
 .category {
   .bestsellers__cart4 {
     margin-top: -35px;
@@ -414,7 +400,6 @@ a:active {
   }
 }
 
-// mobile__copy
 .mobile__copy {
   display: flex;
   flex-wrap: wrap;
@@ -448,14 +433,6 @@ a:active {
   }
 }
 
-.button-arrow {
- 
-}
-
-.arrow-down {
-}
-
-// social__list
 .social__list {
   display: flex;
   justify-content: space-between;
@@ -475,21 +452,24 @@ a:active {
   }
 }
 
-// ---------catalog---------
+// ---------catalog---------------------------------------------------
 
-//catalog__inner
 .catalog__inner {
   margin: 0 auto;
 }
 
-//menu
+.active-link {
+  border-bottom: 2px solid #151c22c9;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .menu {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: 23px;
+  margin: 25px 0; 
 
-  //menu__nav
   &__nav {
     position: relative;
     width: 100px;
@@ -498,11 +478,10 @@ a:active {
   &__container {
     position: relative;
     z-index: 1;
-    transition: 1s;
-    transform: translateY(-1000px);
+    transition: .5s;
+    transform: translateY(-300px);
   }
 
-  //menu__list
   &__list {
     width: 100%;
     position: absolute;
@@ -529,39 +508,27 @@ a:active {
     }
   }
 
-  //menu__items
   &__items {
     display: flex;
+    justify-content: space-between;
     position: relative;
-    width: 100px;
 
-    .menu__search::before,
-    .menu__basket::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      width: 30px;
-      height: 20px;
+    a:last-child {
+      margin-left: 20px;
     }
+  }
 
-    //menu__search
-    .menu__search::before {
-      top: 0;
-      left: 35px;
-      background-image: url("../img/search-catalog.svg");
-    }
+  a:hover {
+    opacity: 0.5;
+  }
 
-    //menu__basket
-    .menu__basket::after {
-      top: 0;
-      right: -10px;
-      background-image: url("../img/bask-catalog.svg");
-    }
+  a:active {
+    opacity: 0.3;
   }
 }
 
-//nav-active
 .nav-active {
+  z-index: 2;
   transform: translateY(0px);
 
   .menu__list {
@@ -570,7 +537,6 @@ a:active {
   }
 }
 
-//burger-bth
 .burger-bth {
   position: relative;
   width: 20px;
@@ -588,6 +554,7 @@ a:active {
     width: 20px;
     margin-left: -10px;
     background-color: #151c22;
+    transition: .3s;
   }
 
   &::before,
@@ -605,7 +572,6 @@ a:active {
   }
 }
 
-//bth-active
 .bth-active {
   span {
     height: 0;
@@ -620,9 +586,8 @@ a:active {
   }
 }
 
-//main__nav
 .main-nav {
-  //main__nav
+
   &__list {
     display: flex;
     margin-top: 33px;
@@ -634,49 +599,48 @@ a:active {
   }
 }
 
-//filter
 .filter {
   margin-top: 28px;
 }
 
-//Form
 .form {
   position: relative;
   display: block;
   width: 100%;
   font-size: 18px;
+  z-index: 1;
+  
 
   &__inner {
     display: block;
     height: 0px;
+    
   }
 
   input {
     display: none;
-    visibility: hidden;
   }
 
   &__filter:checked ~ &__label {
+    display: flex;
     opacity: 1;
     background-color: #ffffff;
     border-top: none;
     font-size: 16px;
     transform: translateX(0%);
+    transition: .2s ease-out;
   }
 
   &__filter:checked ~ &__close {
     border-bottom: 2px solid #151c22;
   }
 
-  &__filter:checked ~ &__apply {
-    background-color: #151c22;
-  }
-
   .checkbox2:checked ~ &__price-content {
     min-height: 70px;
     font-size: 14px;
     opacity: 0.9;
-    transform: translateX(0px);
+    transform: translateX(0);
+    transition: .2s ease-out
   }
 
   .checkbox3:checked ~ &__color-content,
@@ -688,6 +652,7 @@ a:active {
     font-size: 14px;
     opacity: 1;
     transform: translateY(0);
+    transition: .3s ease-out
   }
 
   &__filter:checked ~ .first,
@@ -695,6 +660,7 @@ a:active {
   .checkbox3:checked ~ .first,
   .checkbox4:checked ~ .first {
     transform: rotate(-45deg);
+    transition: .3s ease-out;
   }
 
   &__filter:checked ~ .second,
@@ -702,6 +668,7 @@ a:active {
   .checkbox3:checked ~ .second,
   .checkbox4:checked ~ .second {
     transform: rotate(45deg);
+    transition: .3s ease-out;
   }
 
   &__tittle {
@@ -712,21 +679,23 @@ a:active {
   }
 
   &__label {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
     width: 100%;
     font-size: 0;
-    overflow: hidden;
     transition: 0.5s all;
     opacity: 0;
     transform: translateY(500%);
     border: 2px solid #151c22;
+    transition: .2s ease-out;
+    z-index: 0;
   }
 
   .content-text {
     padding-top: 15px;
     padding-left: 15px;
+    cursor: pointer;
   }
 
   &__content {
@@ -736,33 +705,31 @@ a:active {
     font-size: 0;
     padding: 10px;
     overflow: hidden;
-    transition: 0.5s all;
+    transition: 0.1s all;
   }
 
-  // arrow --------------------
   &__line {
     position: absolute;
     width: 10px;
     height: 2px;
     background-color: #000000;
-    transition: 0.5s all;
   }
 
   .first {
-    top: 20px;
-    right: 19px;
+    top: 24px;
+    right: 18px;
     transform: rotate(45deg);
   }
 
   .second {
-    top: 20px;
+    top: 24px;
     right: 12px;
     transform: rotate(-45deg);
   }
-  // ----------------arrow //
 
   &__apply {
     background-color: #151c22;
+    transition: .3s ease-out;
   }
 
   .apply {
@@ -783,7 +750,7 @@ a:active {
 
   //price ----------------
   .form__price-content {
-    transition: 0.5s all;
+    transition: 0.1s all;
     opacity: 0;
     transform: translateY(500%);
     min-height: 10px;
@@ -811,7 +778,7 @@ a:active {
   .form__color-content {
     margin-bottom: 5px;
     padding-right: 60px;
-
+    
     label {
       cursor: pointer;
       position: relative;
@@ -826,6 +793,7 @@ a:active {
       right: 30%;
       top: 30%;
       border-radius: 50%;
+      transition: .2s ease-out;
     }
 
     .color1::before {
@@ -855,12 +823,12 @@ a:active {
     input[type="radio"]:checked + label:before {
       width: 16px;
       height: 16px;
-      transition: 0.5s all;
+      transition: 0.3s all;
       box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
     }
 
     label:hover:before {
-      transition: 0.5s all;
+      transition: 0.3s all;
       box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.7);
     }
   }
@@ -870,7 +838,7 @@ a:active {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    transition: 0.5s all;
+    transition: 0.3s all;
     opacity: 0;
     transform: translateY(500%);
     min-height: 10px;
@@ -901,17 +869,17 @@ a:active {
   //---------------Collection
 }
 
-//goods
 .woman {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .woman__card5 {
   grid-column: span 2;
   grid-row: span 2;
+  width: 100%
 }
 
 .woman__card {
@@ -923,7 +891,6 @@ a:active {
   left: 50%;
   height: 66px;
   margin-top: 30px;
-  margin-bottom: 60px;
   padding: 25px 50px;
   color: #ffffff;
   background-color: #151c22;
@@ -1145,8 +1112,6 @@ a:active {
     opacity: 0.1;
   }
 }
-
-
 
 .table {
   display: none;
