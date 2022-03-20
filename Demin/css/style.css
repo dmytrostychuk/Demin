@@ -2250,6 +2250,10 @@ a:active {
     font-size: 18px;
   }
 
+  .bestsellers__cart {
+    width: auto;
+  }
+
   .bestsellers__cart p {
     padding-top: 23px;
   }
