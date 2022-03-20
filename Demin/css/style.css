@@ -1136,7 +1136,8 @@ a:active {
   position: relative;
   left: 50%;
   height: 66px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding: 25px 50px;
   color: #ffffff;
   background-color: #151c22;
@@ -1831,7 +1832,6 @@ a:active {
         -ms-flex-pack: end;
             justify-content: flex-end;
     width: 100%;
-    padding-right: 3%;
   }
 
   .form {
@@ -1934,15 +1934,17 @@ a:active {
   }
 
   .woman {
+    width: 720px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row dense;
+    grid-column-gap: 50px;
   }
 
   .woman__card5 {
-    grid-column: span 2;
+    grid-column: span 2.5;
     grid-row: span 2;
-    width: 430px;
+    width: 464px;
   }
 
   .woman__card {
@@ -1955,6 +1957,7 @@ a:active {
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
+    margin-bottom: 50px;
   }
 
   .product {
@@ -2094,7 +2097,7 @@ a:active {
   }
 
   .header__inner {
-    max-width: 1366px;
+    max-width: 1330px;
     margin: 0 auto;
   }
 
@@ -2247,11 +2250,6 @@ a:active {
     font-size: 18px;
   }
 
-  .bestsellers__cart {
-    width: auto;
-    margin-bottom: 0;
-  }
-
   .bestsellers__cart p {
     padding-top: 23px;
   }
@@ -2370,12 +2368,14 @@ a:active {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-flow: row dense;
+    width: 1300px;
+    grid-column-gap: 107px;
   }
 
   .woman__card5 {
     grid-column: span 2;
     grid-row: span 2;
-    width: 552px;
+    width: 600px;
   }
 
   .woman__card {
