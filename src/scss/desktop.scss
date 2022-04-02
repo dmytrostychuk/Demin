@@ -3,7 +3,6 @@
     display: none;
   }
 
-
   .header {
     &__wrapper {
       padding-bottom: 0;
@@ -68,6 +67,7 @@
     .desktop {
       display: flex;
       flex-direction: column;
+
       .nav__search {
         left: 47px;
         top: 71px;
@@ -150,10 +150,10 @@
   .bestsellers {
     margin-top: 65px;
     font-size: 18px;
-    
+
     &__cart {
       width: auto;
-      
+
       p {
         padding-top: 23px;
 
@@ -203,8 +203,10 @@
     .bestsellers__cart4 {
       margin-top: 0;
     }
+
     p {
       margin-top: 12px;
+
       &:nth-last-child(1) {
         font-size: 18px;
       }
@@ -237,7 +239,6 @@
   }
 
   //----------------catalog---------------------
-
   .catalog__inner {
     width: 1366px;
     margin: 0 auto;
@@ -296,38 +297,41 @@
   }
 
   // ---------product card---------
-  .slider {
-    .slick-arrow {
-      top: 36%;
-    }
 
-    .slick-arrow.slick-prev {
-      left: -75px;
-      background-image: url("../img/arrow-prev-desk.svg");
-    }
+  .product {
 
-    .slick-arrow.slick-next {
-      right: -75px;
-      background-image: url("../img/arrow-next-desk.svg");
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: block;
     }
   }
 
-  .product {
-    margin-top: 75px;
-    max-width: 1366px;
+  .product__gallery {
+    width: 500px;
+    margin-right: 80px;
+  }
 
-    &__wrapper {
-      width: 400px;
+  .gallery-thumbs {
+
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 0;
     }
 
-    &__galery {
-      .galery__item {
-        margin-top: 20px;
-        margin-right: 20px;
+    .swiper-slide {
+      width: 85px;
+      margin-right: 20px;
+      margin-top: 22px;
+      cursor: pointer;
 
-        &:nth-child(4) {
-          margin-right: 0;
-        }
+      &:nth-child(2) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
       }
     }
   }
@@ -335,6 +339,7 @@
   .description {
     width: 52%;
     margin-left: 47px;
+    height: 657px;
 
     &__container {
       height: 656px;
@@ -380,10 +385,6 @@
     }
   }
 
-  .slider {
-    text-align: start;
-  }
-
   .product__items {
     display: none;
   }
@@ -392,12 +393,5 @@
     margin-top: 85px;
     font-size: 32px;
     font-family: "WorkSans-Bold";
-  }
-
-  .product-like {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 65px;
   }
 }
