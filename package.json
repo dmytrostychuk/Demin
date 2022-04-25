@@ -1,14 +1,14 @@
 {
-	"name": "Demin",
+	"name": "fls-gulp",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Сборка gulp",
 	"main": "index.html",
-	"author": "Dmitriy_Stychuk",
+	"author": "Fls",
 	"license": "ISC",
 	"devDependencies": {
 		"browser-sync": "latest",
 		"del": "latest",
-		"gulp": "^4.0.2",
+		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
 		"gulp-file-include": "latest",
@@ -18,16 +18,16 @@
 		"gulp-newer": "latest",
 		"gulp-plumber": "latest",
 		"gulp-rename": "latest",
-		"gulp-sass": "^5.0.0",
+		"gulp-sass": "latest",
 		"gulp-svg-sprite": "latest",
-		"gulp-ttf2woff": "latest",
-		"gulp-ttf2woff2": "latest",
+		"gulp-ttf2woff": "^1.1.1",
+		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-uglify-es": "latest",
 		"gulp-webp-html": "latest",
 		"gulp-webpcss": "latest",
 		"imagemin-webp": "latest",
-		"sass": "^1.37.0",
+		"sass": "latest",
 		"transform-runtime": "0.0.0",
-		"webp-converter": "2.2.3"
+		"webp-converter": "^2.2.3"
 	}
 }
