@@ -3,11 +3,9 @@
     dmytrostychuk.github.io/Denim/
   </a>
 </h1>
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/72120575/165741956-065fb392-38a5-45db-8310-156e36580d48.jpg">
 </p>
-
 <h2>
   Technologies what I used:
 </h2>
